@@ -1,0 +1,39 @@
+
+  <div id="aplications_screen">
+    <div class="row" id="aplication-panel">
+      <app-categories class="col-sm-12 col-md-4"></app-categories>
+
+      <div class="">
+        <div *ngIf="aplication" class="card">
+          
+          <img class="img-thumbnail img-fluid z-depth-1"
+          style="width: 200px" src="{{aplication.imgPath}}">
+          <h5>{{aplication.name | uppercase}}</h5>
+          <div><span>id: </span>{{aplication._id}}</div>
+          <div><span>category: </span>{{aplication.category}}</div>
+          <div><span>date: </span>{{aplication.uploadDate}}</div>
+          <p>description: {{aplication.description}}</p>
+          <p>type: {{aplication.appType}}</p>
+          <p>rating: {{aplication.rating}}</p>
+          <p>opSystem: {{aplication.opSystem}}</p>
+          <p>register: {{aplication.register}}</p>
+          <p>organization: {{aplication.organization}}</p>
+          <p>developer: {{aplication.developer}}</p>
+          <div>
+            <!-- <label>name:
+              <input [(ngModel)]="aplication.name" placeholder="name">
+            </label> -->
+            <a class="waves-effect waves-light btn" href="{{aplication.accessPath}}">button</a>
+          </div>
+          <app-comment data="{{aplication._id}}" class="card"></app-comment>
+          <div *ngFor="let galery of aplication.galery">
+            <img src={{galery.galpath}} alt="" width="200px">
+          </div>
+
+        </div>
+    </div>
+      
+    </div>
+
+
+  </div>

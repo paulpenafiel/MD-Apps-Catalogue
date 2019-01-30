@@ -1,0 +1,34 @@
+<!-- Material form Login-->
+<div class="d-flex justify-content-center d-flex align-items-center row" id="login_form">
+    <div class="card col-md-5 col-sm-12 ">
+
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Ingreso</strong>
+        </h5>
+
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+            <!-- Form -->
+            <form (submit)="loginUserSubmit()" class="text-center" style="color: #757575;">
+
+                <!-- userName -->
+                <div class="md-form">
+                    <input type="text" class="form-control" placeholder="Nombre de Usuario" [(ngModel)]="username" name="username">
+                </div>
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="password" name="password">
+                </div>
+
+                <!-- Sign up button -->
+                <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Ingresar</button>
+
+                <!-- Register -->
+                <p>¿No eres miembro?
+                    <a href="">Registrate</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Material form login -->

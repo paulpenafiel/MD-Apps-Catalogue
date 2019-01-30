@@ -1,0 +1,77 @@
+
+<!-- Material form Register-->
+<div class="d-flex justify-content-center d-flex align-items-center row" id="register_form">
+  <div class="card col-md-5 col-sm-12 ">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+      <strong>Registro</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+      <!-- Form -->
+      <form (submit)="registerUser()" class="text-center" style="color: #757575;">
+
+        <div class="form-group">
+          <label>Tipo de Usuario</label>
+          <div class="md-form">
+            <select class="browser-default custom-select" [(ngModel)]="userType" name="userType">
+              <option>Terapista</option>
+              <option>Paciente</option>
+              <option>Cuidador</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Name -->
+        <div class="md-form">
+            <input type="text"  class="form-control" placeholder="Nombre y Apellido" [(ngModel)]="name" name="name">
+          </div>
+
+        <!-- organization -->
+        <div class="md-form">
+            <input type="text"  class="form-control" placeholder="Organización" [(ngModel)]="organization" name="organization">
+          </div>
+
+          <div class="md-form">
+              <select class="browser-default custom-select" [(ngModel)]="gender" name="gender">
+                <option>Masculino</option>
+                <option>Femenino</option>              
+              </select>
+            </div>
+        
+        <label>Datos de autenticación</label>
+        <!-- userName -->
+        <div class="md-form">
+            <input type="text"  class="form-control" placeholder="Nombre de Usuario" [(ngModel)]="username" name="username">
+          </div>
+
+        <!-- Email -->
+        <div class="md-form">
+          <input type="email"  class="form-control" placeholder="correo electrónico" [(ngModel)]="email" name="email">
+        </div>
+
+        <!-- Password -->
+        <div class="md-form">
+          <input type="password"  class="form-control" placeholder="Contraseña" [(ngModel)]="password" name="password">
+        </div>
+
+        <!-- Sign up button -->
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+        <!-- Register -->
+        <!-- <p>Not a member?
+          <a href="">Register</a>
+        </p> -->
+
+      
+
+      </form>
+      <!-- Form -->
+
+    </div>
+
+  </div>
+</div>
+<!-- Material form login -->

@@ -1,0 +1,84 @@
+<!--Navegación Principal-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Logo Catálogo</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/aplications">Aplicaciones<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" href="#">Noticias</a>
+      </li>
+    </ul>
+    <!--<form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    <ul class="navbar-nav  my-2 my-lg-0">
+      <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/profile">Mi Perfil</a>
+      </li>
+      <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/register">Registrarse</a>
+      </li>
+      <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="login">Ingresar</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" class="nav-item">
+        <a class="nav-link" (click)="onLogoutClick()">Salir</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" href="#">Ayuda</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" class="nav-item avatar">
+        <a class="nav-link p-0" href="#">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0" alt="avatar image"
+            height="35">
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--Navegación por categorías-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo04"
+      aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
+      <span>CATEGORIAS</span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center order-2 " id="navbarTogglerDemo04">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-laptop"></i>
+          <a class="nav-link">Herramientas de Comunicación alternativa</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-laptop"></i>
+          <a class="nav-link">Rampas Digitales y Uso del computador</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-laptop"></i>
+          <a class="nav-link" routerLink="/cat/Profesionales">Herramientas Profesionales de Terapia</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-laptop"></i>
+          <a class="nav-link" routerLink="/cat/Autocuidado">Herramientas de Autocuidado</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-wheelchair"></i>
+          <a class="nav-link">Aplicaciones para movilidad Accesible</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-laptop"></i>
+          <a class="nav-link" routerLink="/cat/Concientiza">Aplicaiones de promoción y concientización</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

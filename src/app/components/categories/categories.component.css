@@ -1,0 +1,11 @@
+#panel-category{
+    padding-top: 5%;
+}
+
+a:hover{
+    background-color: lightseagreen;
+}
+
+a:active{
+  color: green;  
+}
