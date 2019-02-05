@@ -10,7 +10,7 @@ export class AplicationService {
   readonly aplicationsUrl = 'http://localhost:3000/catalogue';
   selectedAp: Aplication;
   aplications: Aplication[];
-
+  
 
   constructor(private http:HttpClient) { }
 

@@ -1,7 +1,10 @@
+<div class="fixed-top">
 <app-navbar></app-navbar>
 <flash-messages class="fixed-top"></flash-messages>
-
+<app-categories></app-categories>
+</div>
 <router-outlet></router-outlet>
+
 <!-- Footer -->
 <footer class="page-footer font-small bg-dark pt-4">
 
@@ -12,52 +15,60 @@
       <!-- Grid column -->
       <div class="col-md-3 mt-md-0 mt-3">
         <!-- Content -->
-        <img src="http://xentinels.com/tesisrojas/wordpress/wp-content/uploads/2019/01/INCLU-Logo-v3-05.png" class="img-fluid d-block" style="width: 300px" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate officia culpa corporis repellat ipsam deserunt minima sint voluptates, sequi accusamus debitis, exercitationem maxime consectetur quae velit, excepturi distinctio accusantium?</p>
+        <img src="http://xentinels.com/tesisrojas/wordpress/wp-content/uploads/2019/01/INCLU-Logo-v3-05.png" class="img-fluid d-block"
+          style="width: 200px" alt="">
+        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptate officia culpa corporis repellat
+          ipsam deserunt minima sint voluptates, sequi accusamus debitis, exercitationem maxime consectetur quae velit,
+          excepturi distinctio accusantium?</p>
       </div>
       <!-- Grid column -->
       <hr class="clearfix w-100 d-md-none pb-3">
       <!-- Grid column -->
-      <div class="col-md-4 mb-md-0 mb-3">
-          <!-- Links -->
-          <ul class="list-unstyled">
-            <li>
-                <p class="fas fa-map-marker-alt font-weight-ligh"> Ladron de Guevara E11-253 Quito, Ecuador</p> 
-            </li>
-            <!-- <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li> -->
-            <div class="myframegmap"> 
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448183.73912804417!2d76.81306640115254!3d28.646677246352574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1513154329228" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.791475203534!2d-78.49087988572991!3d-0.21018133545693002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sEscuela+Polit%C3%A9cnica+Nacional!5e0!3m2!1ses!2sec!4v1548738106114" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-       </div>
-          </ul>
-        </div>
-        <!-- Grid column -->
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-          <!-- Links -->
-          <h5 class="text-uppercase">Acerca de nuestro equipo</h5>
-          <ul class="list-unstyled">
-            <li>
-                <i class="fab fa-twitter"></i>
-            </li>
-            <li>
-                <i class="fab fa-facebook-square"></i>
-            </li>
-            <li>
-                <i class="fab fa-youtube-square"></i>
-            </li>
+      
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="col-md-2 mb-md-0 mb-3">
+        <!-- Links -->
+        <h5 class="text-uppercase">Siguenos</h5>
+        <ul class="list-unstyled" id="social">
+          <li>
+            <i class="fab fa-twitter"></i>
+          </li>
+          <li>
+            <i class="fab fa-facebook-square"></i>
+          </li>
+          <li>
+            <i class="fab fa-youtube-square"></i>
+          </li>
 
-          </ul>
-        </div>
-        <!-- Grid column -->
+        </ul>
+      </div>
+
+
+      <div class="col-md-3 mb-md-0 mb-3">
+        <!-- Links -->
+        <h5 class="text-uppercase">Contáctanos</h5>
+        <ul class="list-unstyled" id="social">
+          
+        </ul>
+      </div>
+      <!-- Grid column -->
+      <div class="col-md-4 mb-md-0 mb-3">
+        <!-- Links -->
+        <h5 class="text-uppercase">Visítanos</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="fas fa-map-marker-alt font-weight-ligh"> Ladron de Guevara E11-253 Quito, Ecuador</p>
+          </li>
+
+          <div class="myframegmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.791475203534!2d-78.49087988572991!3d-0.21018133545693002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sEscuela+Polit%C3%A9cnica+Nacional!5e0!3m2!1ses!2sec!4v1548738106114"
+              width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </ul>
+      </div>
+
+     
     </div>
     <!-- Grid row -->
   </div>

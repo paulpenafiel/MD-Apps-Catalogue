@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   name: String;
   username: String;
   email: string;
-  userType: string;
+  usertype: string;
   password: string;
   organization: String;
   gender: String;
@@ -32,12 +32,13 @@ export class RegisterComponent implements OnInit {
   registerUser(){
     const user ={
       name: this.name,
-      userType: this.userType,
+      usertype: this.usertype,
       email: this.email,
       password: this.password,
       organization: this.organization,
       gender: this.gender,
-      username: this.username
+      username: this.username,
+      imgpath: this.imgpath
     }
 
     //required fields

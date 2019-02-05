@@ -8,7 +8,7 @@ export class ValidationService {
   constructor() { }
 
   validateCompleteness(user){
-    if(user.name == undefined || user.email== undefined || user.username==undefined || user.password==undefined || user.gender==undefined || user.userType==undefined || user.organization==undefined){
+    if(user.name == undefined || user.email== undefined || user.username==undefined || user.password==undefined || user.gender==undefined || user.usertype==undefined || user.organization==undefined){
       return false;
     } else {
       return true;

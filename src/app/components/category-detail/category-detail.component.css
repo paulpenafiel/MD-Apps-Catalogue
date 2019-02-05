@@ -28,6 +28,7 @@ p{
 
 #aplication_card{
     margin-top: 6px;
+    margin-bottom: 6px;
 }
 .checked {
     color: orange;

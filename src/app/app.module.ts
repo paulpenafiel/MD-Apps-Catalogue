@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AplicationsComponent } from './components/aplications/aplications.component';
@@ -20,6 +21,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
+
 
 @NgModule({
   declarations: [

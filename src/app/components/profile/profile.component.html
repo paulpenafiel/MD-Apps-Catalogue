@@ -1,14 +1,14 @@
 <div *ngIf="user" id="profile_screen">
   <div class="row">
   <div class="col-md-3 border">
-    <img src="https://www.web2printdownunder.co.nz/images/230/204/user-img.png?h=cdd010b0" style="width: 200px" class="img-fluid mx-auto d-block">
+    <img src="{{user.imgPath}}" style="width: 200px" class="img-fluid mx-auto d-block">
     <a href="#" class="badge badge-primary d-block">Cambiar Imagen</a>
   </div>
   <div id="user_information" class="col-md-8 border">
     <h2 class="page.header">{{user.name}}</h2>
     <ul class="list-group">
       <li class="list-group-item">Nombre: {{user.username}}</li>
-      <li class="list-group-item">Tipo de Usuario: {{user.userType}}</li>
+      <li class="list-group-item">Tipo de Usuario: {{user.usertype}}</li>
       <li class="list-group-item">Organización: {{user.organization}}</li>
       <li class="list-group-item">Género: {{user.gender}}</li>
     </ul>

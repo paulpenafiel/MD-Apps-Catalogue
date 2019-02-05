@@ -1,12 +1,39 @@
-<!-- <div class="rounded border border-secondary">
-  <div class="collection">
-    <p class="text-center font-weight-bold">BÚSQUEDA</p>
-    <form class="form-inline md-form form-sm mt-0">
-      
-      <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Buscar" aria-label="Search">
-      <i class="material-icons" aria-hidden="true">search</i>
-    </form>
-  </div> -->
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo04"
+      aria-controls="navbarTogglerDemo04" aria-expanded="false" aria-label="Toggle navigation">
+      <span>CATEGORIAS</span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center order-2 " id="navbarTogglerDemo04">
+      <ul class="navbar-nav nav-fill w-100">
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-volume-up fa-2x"></i>
+          <a class="nav-link" routerLink="/cat/alternativa">Herramientas de comunicación alternativa</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-laptop fa-2x"></i>
+          <a class="nav-link" routerLink="/cat/computador">Rampas digitales y uso del computador</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-user-md fa-2x"></i>
+          <a class="nav-link" routerLink="/cat/profesionales">Herramientas profesionales de terapia</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-child fa-2x"></i>
+          <a class="nav-link" routerLink="/cat/autocuidado">Herramientas de autocuidado</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="fas fa-wheelchair fa-2x"></i>
+          <a class="nav-link" routerLink="/cat/movilidad">Aplicaciones para movilidad accesible</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <div class="md-h-line"></div> <i class="far fa-handshake fa-2x"></i>
+          <a class="nav-link" routerLink="/cat/concientiza">Aplicaciones de promoción y concientización</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
     

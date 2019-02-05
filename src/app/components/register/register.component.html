@@ -9,14 +9,14 @@
 
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
-
+      
       <!-- Form -->
       <form (submit)="registerUser()" class="text-center" style="color: #757575;">
 
         <div class="form-group">
           <label>Tipo de Usuario</label>
           <div class="md-form">
-            <select class="browser-default custom-select" [(ngModel)]="userType" name="userType">
+            <select class="browser-default custom-select" [(ngModel)]="usertype" name="usertype">
               <option>Terapista</option>
               <option>Paciente</option>
               <option>Cuidador</option>
@@ -60,12 +60,6 @@
         <!-- Sign up button -->
         <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
 
-        <!-- Register -->
-        <!-- <p>Not a member?
-          <a href="">Register</a>
-        </p> -->
-
-      
 
       </form>
       <!-- Form -->
@@ -74,4 +68,3 @@
 
   </div>
 </div>
-<!-- Material form login -->

@@ -1,9 +1,9 @@
-<div class="" id="aplications_screen">
+<div class="container" id="aplications_screen">
   <div class="container" id="aplication-panel">
 
-    <div class=" border border-secondary rounded col-md-12 col-ms-12">
+    <div class="border border-secondary rounded col-md-12 col-ms-12">
       <div class="row">
-        <div *ngFor="let aplication of aplications" class="col-md-4 col-sm-4 col-6" id="aplication_card">
+        <div *ngFor="let aplication of aplications" class="col-lg-3 col-md-4 col-sm-4 col-6" id="aplication_card">
           <div class="card">
             <div class="card-image">
               <img src="{{aplication.imgPath}}">
@@ -14,11 +14,11 @@
               <a routerLink="/detail/{{aplication._id}}" class="blue-text">{{aplication.name}}</a>
               <p>{{aplication.category}}</p>
               <!-- <p>{{aplication.rating}}</p> -->
-              <p><span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span></p>
+              <p><span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span> {{aplication.rating}}</p>
             </div>
           </div>
         </div>

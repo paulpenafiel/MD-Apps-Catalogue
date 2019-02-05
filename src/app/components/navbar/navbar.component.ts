@@ -10,9 +10,20 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class NavbarComponent implements OnInit {
 
+  user:Object;
   constructor(private authService: AuthenticationService, private router: Router, private flashMessage: FlashMessagesService) { }
 
   ngOnInit() {
+    this.authService.getUserProfile()
+    .subscribe(profile => {
+      console.log(profile);
+      this.user = profile['user'];
+      
+    },
+    err => {
+      console.log(err);
+      return false;
+    });
   }
 
   onLogoutClick(){

@@ -1,39 +1,60 @@
+<div class="container" id="aplication_screen">
+  <!-- <div class="row" id="aplication-panel"> -->
+  <div class="">
+    <div *ngIf="aplication" class="card" id="app-panel">
 
-  <div id="aplications_screen">
-    <div class="row" id="aplication-panel">
-      <app-categories class="col-sm-12 col-md-4"></app-categories>
-
-      <div class="">
-        <div *ngIf="aplication" class="card">
-          
-          <img class="img-thumbnail img-fluid z-depth-1"
-          style="width: 200px" src="{{aplication.imgPath}}">
+      <div class="row" id="main-info-row">
+        <img id="app-main-img" class="img-thumbnail img-fluid z-depth-1 col-md-3" style="width: 200px" src="{{aplication.imgPath}}">
+        <div class="col-md-7">
+          <h5>{{aplication.category}}</h5>
           <h5>{{aplication.name | uppercase}}</h5>
-          <div><span>id: </span>{{aplication._id}}</div>
-          <div><span>category: </span>{{aplication.category}}</div>
-          <div><span>date: </span>{{aplication.uploadDate}}</div>
-          <p>description: {{aplication.description}}</p>
           <p>type: {{aplication.appType}}</p>
-          <p>rating: {{aplication.rating}}</p>
-          <p>opSystem: {{aplication.opSystem}}</p>
-          <p>register: {{aplication.register}}</p>
-          <p>organization: {{aplication.organization}}</p>
-          <p>developer: {{aplication.developer}}</p>
-          <div>
-            <!-- <label>name:
-              <input [(ngModel)]="aplication.name" placeholder="name">
-            </label> -->
-            <a class="waves-effect waves-light btn" href="{{aplication.accessPath}}">button</a>
-          </div>
-          <app-comment data="{{aplication._id}}" class="card"></app-comment>
-          <div *ngFor="let galery of aplication.galery">
-            <img src={{galery.galpath}} alt="" width="200px">
-          </div>
+          <p> {{aplication.uploadDate | date: 'medium'}}</p>
+          <p>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            {{aplication.rating}}
+          </p>
+          <p><i class="fas fa-user"></i> 0 en total</p>
+          <div class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success" href="{{aplication.accessPath}}">Acceder</a></div>
 
         </div>
-    </div>
-      
-    </div>
+      </div>
+      <div class="row" id="screenshots-row">
+        <div *ngFor="let galery of aplication.galery" class="col-md-4">
+          <img class="img-fluid" src={{galery.galpath}} alt="">
+        </div>
+      </div>
+      <!-- <div><span>id: </span>{{aplication._id}}</div> -->
+      <div class="card" id="description-row">
+        <div class="card-body">
+          <h5 class="card-title">Descipción</h5>
+          <p class="card-text">{{aplication.description}}</p>
+        </div>
+      </div>
+      <div class="card" id="description-row">
+        <div class="card-body">
+          <h5 class="card-title">Más Información</h5>
+          <p class="card-text">Sistema Operativo: {{aplication.opSystem}}</p>
+          <p class="card-text">¿Requiere Registro?: {{aplication.register}}</p>
+          <p class="card-text">Organización auspiciante: {{aplication.organization}}</p>
+          <p class="card-text">Desarrollador: {{aplication.developer}}</p>
+        </div>
+      </div>
+      <div>
+        <!-- <label>name:
+              <input [(ngModel)]="aplication.name" placeholder="name">
+            </label> -->
+
+      </div>
+      <app-comment dataApp="{{aplication._id}}" dataUser="" class="card"></app-comment>
 
 
+
+
+    </div>
   </div>
+</div>

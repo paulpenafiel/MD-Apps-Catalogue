@@ -1,10 +1,15 @@
 
-#aplication-panel{
-    padding-top: 5px;
+#app-panel{
+    padding: 2%;
     padding-bottom: 5px;
     margin: 5px;
+  
 }
 
-#aplications_screen{
+#aplication_screen{
     background-color:#dddfd4 ;
+}
+
+#screenshots-row{
+    margin-top: 2%;
 }
