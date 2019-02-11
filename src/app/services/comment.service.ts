@@ -10,13 +10,18 @@ export class CommentService {
   readonly commentsUrl = 'http://localhost:3000/comments';
   comments: Comment[];
 
-  constructor(private http:HttpClient) { }
+
+  constructor(private http: HttpClient) { }
 
   getCommentsByApp(idApp: string) {
-    return this.http.get(this.commentsUrl+'/'+idApp);
+    return this.http.get(this.commentsUrl + '/' + idApp);
   }
 
   getCommentsByUser(idUser: string) {
-    return this.http.get(this.commentsUrl+'/byUser/'+idUser);
+    return this.http.get(this.commentsUrl + '/byUser/' + idUser);
+  }
+
+  createComment(newComment: Comment) {
+    return this.http.post(this.commentsUrl + '/newComment', newComment);
   }
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
 
@@ -43,7 +43,7 @@ import { CategoryDetailComponent } from './components/category-detail/category-d
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FlashMessagesModule
+    FlashMessagesModule,
   ],
   providers: [ValidationService, FlashMessagesService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]
