@@ -21,6 +21,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
+import { DownloadsComponent } from './components/downloads/downloads.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CategoryDetailComponent } from './components/category-detail/category-d
     DashboardComponent,
     CategoriesComponent,
     CommentComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    DownloadsComponent
   ],
   imports: [
     BrowserModule,

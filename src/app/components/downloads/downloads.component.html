@@ -1,0 +1,10 @@
+<div *ngIf="dataTarget==='profile'">
+<div *ngFor="let download of downloads">
+  <p>{{download.date}}</p>
+  <p>{{download.nameAplication}}</p>
+</div>
+</div>
+
+<div *ngIf="dataTarget==='app'">
+  <p>Numero de Descargas: {{downloadsNumber}}</p>
+</div>

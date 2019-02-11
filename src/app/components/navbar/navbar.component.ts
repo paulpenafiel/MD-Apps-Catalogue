@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { ActivatedRoute } from '@angular/router';
+import {  User  } from '../../models/user';
 
 @Component({
   selector: 'app-navbar',
@@ -10,8 +12,18 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class NavbarComponent implements OnInit {
 
-  user:Object;
-  constructor(private authService: AuthenticationService, private router: Router, private flashMessage: FlashMessagesService) { }
+  // user: Object;
+  user ={
+    _id: '',
+    name: '',
+    usertype: '',
+    gender: '',
+    email: '',
+    username: '',
+    imgPath: 'https://pngimage.net/wp-content/uploads/2018/06/logo-user-png-6.png',
+    password: ''
+  }
+  constructor(private authService: AuthenticationService, private router: Router, private flashMessage: FlashMessagesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.authService.getUserProfile()

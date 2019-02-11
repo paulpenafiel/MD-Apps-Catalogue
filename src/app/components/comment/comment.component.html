@@ -15,7 +15,7 @@
           <br>
           <button *ngIf="authService.loggedIn()" type="button" class="btn btn-info pull-right" (click)="addComment()">Enviar</button>
           <button *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right">Hacer un Comentario</button>
-          <p>{{user._id}}</p>
+          <!-- <p>{{user._id}}</p> -->
           
           <div class="clearfix"></div>
         </form>

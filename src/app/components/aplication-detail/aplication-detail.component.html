@@ -18,8 +18,9 @@
             <span class="fa fa-star"></span>
             {{aplication.rating}}
           </p>
-          <p><i class="fas fa-user"></i> 0 en total</p>
-          <div class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success" href="{{aplication.accessPath}}">Acceder</a></div>
+          <!-- <p><i class="fas fa-user"></i> 0 en total</p> -->
+          <app-downloads dataUser="" dataTarget="app" dataApp="{{aplication._id}}"></app-downloads>
+          <div class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success" href="{{aplication.accessPath}}" (click)="registerDownload()">Acceder</a></div>
 
         </div>
       </div>
