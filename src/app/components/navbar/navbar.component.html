@@ -12,12 +12,12 @@
         <a class="nav-link" routerLink="/aplications">Aplicaciones<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" href="#">Noticias</a>
+        <a class="nav-link" routerLink="/news">Noticias y Eventos</a>
       </li>
     </ul>
 
     <ul class="navbar-nav  my-2 my-lg-0">
-      <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+      <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" routerLink="/profile">Mi Perfil</a>
       </li>
       <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
@@ -32,9 +32,13 @@
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" href="#">Ayuda</a>
       </li>
-      <li *ngIf="authService.loggedIn()" class="nav-item avatar">
+      <li *ngIf="authService.loggedIn() && authService.isAdministrator()" class="nav-item" >
+        <a class="nav-link" href="#"><i class="fas fa-cog"></i></a>
+      </li>
+      
+      <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item avatar">
         <a class="nav-link p-0" href="#">
-          <img src="{{user.imgPath}}" class="rounded-circle z-depth-0" alt="avatar image"
+          <img src="{{authService.getImgPath()}}" class="rounded-circle z-depth-0" alt="avatar image"
             height="35">
         </a>
       </li>

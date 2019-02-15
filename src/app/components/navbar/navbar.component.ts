@@ -12,17 +12,17 @@ import {  User  } from '../../models/user';
 })
 export class NavbarComponent implements OnInit {
 
-  // user: Object;
-  user ={
-    _id: '',
-    name: '',
-    usertype: '',
-    gender: '',
-    email: '',
-    username: '',
-    imgPath: 'https://pngimage.net/wp-content/uploads/2018/06/logo-user-png-6.png',
-    password: ''
-  }
+   user: Object;
+  // user ={
+  //   _id: '',
+  //   name: '',
+  //   usertype: '',
+  //   gender: '',
+  //   email: '',
+  //   username: '',
+  //   imgPath: 'https://pngimage.net/wp-content/uploads/2018/06/logo-user-png-6.png',
+  //   password: ''
+  // }
   constructor(private authService: AuthenticationService, private router: Router, private flashMessage: FlashMessagesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -36,6 +36,7 @@ export class NavbarComponent implements OnInit {
       console.log(err);
       return false;
     });
+    
   }
 
   onLogoutClick(){

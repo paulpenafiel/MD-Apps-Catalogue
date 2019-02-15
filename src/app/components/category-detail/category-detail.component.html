@@ -1,9 +1,10 @@
 <div class="container" id="aplications_screen">
 
     <div class="view" *ngFor="let category of selectedCategories">
-        <img src="{{category.imgPath}}" class="img-fluid" alt="placeholder">
+        <h4 class="text-center">{{category.description}}</h4>
+        <img src="{{category.imgPath}}" class="img-fluid mx-auto d-block" alt="placeholder">
         <div class="mask waves-effect waves-strong rgba-black-light">
-          <h4 class="text-center">{{category.name}}</h4><hr>
+          <!-- <h4 class="text-center">{{category.name}}</h4><hr> -->
           <h4 class="white-text text-center">{{category.description}}</h4>
         </div>
         

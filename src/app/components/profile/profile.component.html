@@ -1,7 +1,8 @@
+<div class="container" id="total_screen">
 <div *ngIf="user" id="profile_screen">
   <div class="row">
   <div class="col-md-3 border">
-    <img src="{{user.imgPath}}" style="width: 200px" class="img-fluid mx-auto d-block">
+    <img src="{{authService.getImgPath()}}" style="width: 200px" class="img-fluid mx-auto d-block">
     <a href="#" class="badge badge-primary d-block">Cambiar Imagen</a>
   </div>
   <div id="user_information" class="col-md-8 border">
@@ -19,5 +20,6 @@
 </div>
 <div class="row border">
   <app-comment dataApp="" dataUser="{{user._id}}" dataTarget="profile" class="card"></app-comment>
+</div>
 </div>
 </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http'; 
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 export class AuthenticationService {
 
   authToken: any;
-  user: any;
+  // user: any;
+  user: User;
 
   constructor(private http: HttpClient) { }
 
@@ -56,7 +58,9 @@ export class AuthenticationService {
     }else{
       console.log('Goodbye');
       const helper = new JwtHelperService();
-      console.log(helper.isTokenExpired(localStorage.getItem('idToken')));  
+      console.log(helper.isTokenExpired(localStorage.getItem('idToken'))); 
+      this.user=JSON.parse(localStorage.getItem('user')) as User;
+      // console.log(this.user);
       return !helper.isTokenExpired(localStorage.getItem('idToken'));
     }
   }
@@ -66,5 +70,29 @@ export class AuthenticationService {
     this.user = null;
     localStorage.clear();
   }
+
+  getImgPath(){
+    return this.user.imgPath;
+  }
+
+  isAdministrator(){
+    if(this.user.usertype==='administrador'){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  // isAdministrator(){
+  //    this.getUserProfile()
+  //    .subscribe(profile => {
+  //      console.log(profile);
+  //      this.user = profile['user'];
+      
+  //    },
+  //    err => {
+  //      console.log(err);
+  //      return false;
+  //    });
+  //  }
 }
 

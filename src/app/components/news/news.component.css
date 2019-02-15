@@ -1,0 +1,9 @@
+.post-type{
+    text-align: center;
+    background-color: coral;
+}
+
+#posts-screen{ 
+    padding-left: 2%;
+        background-color:#dddfd4 ;
+}

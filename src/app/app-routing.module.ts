@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
+import { NewsComponent } from './components/news/news.component';
 
 const routes: Routes = [
   {path:'', component: AplicationsComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
-  {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]}
+  {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
+  {path: 'news', component: NewsComponent}
 ];
 
 @NgModule({

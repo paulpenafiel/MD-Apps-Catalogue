@@ -2,9 +2,6 @@
   <div class="col-md-12 col-md-offset-2 col-sm-12">
     <div class="comment-wrapper">
       <div class="panel panel-info">
-        <div class="panel-heading">
-          Panel de Comentarios
-        </div>
         <div id="logged-panel" *ngIf="dataTarget===''">
         <div class="panel-body">
           <!-- nuevo -->
@@ -50,8 +47,15 @@
           </ul>
         </div>
       </div>
-      <div *ngIf="dataTarget==='profile'">
-        <p>Esto aparece dependiendo del target {{dataTarget}}</p>
+      <div *ngIf="dataTarget==='profile'" class="row container">
+          <div class="card mb-3 col-md-12" *ngFor="let comment of comments">
+              <div class="row no-gutters">            
+                  <div class="card-body">
+                    <h5 class="card-title">{{comment.date}}</h5>
+                    <p class="card-text"><small class="text-muted">{{comment.body}}</small></p>
+                  </div>
+              </div>
+            </div>
       </div>
       </div>
     </div>

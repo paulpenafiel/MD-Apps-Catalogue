@@ -1,8 +1,19 @@
-<div *ngIf="dataTarget==='profile'">
-<div *ngFor="let download of downloads">
-  <p>{{download.date}}</p>
-  <p>{{download.nameAplication}}</p>
-</div>
+<div *ngIf="dataTarget==='profile'" class="row">
+  <div class="card mb-3 col-md-6" *ngFor="let download of downloads" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{download.imgAplication}}" class="card-img" alt="..." style="max-width: 100px;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{download.nameAplication}}</h5>
+          <p class="card-text"><small class="text-muted">{{download.categoryAplication}}</small></p>
+          <p class="card-text"><small class="text-muted">{{download.date}}</small></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div *ngIf="dataTarget==='app'">

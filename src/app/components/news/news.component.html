@@ -1,3 +1,20 @@
-<p>
-  news works!
-</p>
+<div class="container py-3" id="posts-screen">
+  <div class="card" *ngFor="let post of posts">
+    <div class="row">
+      <div class="col-md-2 post-type">
+          <i class="fas fa-newspaper fa-5x"></i>
+          <h4>{{post.postType}}</h4>
+      </div>
+      <div class="col-md-9 px-3">
+        <div class="card-block px-3">
+          <h4 class="card-title">{{post.title}}</h4>
+          <p class="card-text">{{post.body}}</p>
+          <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
