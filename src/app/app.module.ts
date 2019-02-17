@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
+import { RatingModule } from 'ng-starrating';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,7 @@ import { DownloadsComponent } from './components/downloads/downloads.component';
 import { AdminApplicationsComponent } from './components/admin-components/admin-applications/admin-applications.component';
 import { AdminCommentsComponent } from './components/admin-components/admin-comments/admin-comments.component';
 import { AdminEventsComponent } from './components/admin-components/admin-events/admin-events.component';
+import { RatingComponent } from './components/rating/rating.component';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { AdminEventsComponent } from './components/admin-components/admin-events
     DownloadsComponent,
     AdminApplicationsComponent,
     AdminCommentsComponent,
-    AdminEventsComponent
+    AdminEventsComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { AdminEventsComponent } from './components/admin-components/admin-events
     FormsModule,
     HttpClientModule,
     FlashMessagesModule,
+    RatingModule
   ],
   providers: [ValidationService, FlashMessagesService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]

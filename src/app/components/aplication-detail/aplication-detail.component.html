@@ -10,6 +10,7 @@
           <h5>{{aplication.name | uppercase}}</h5>
           <p>type: {{aplication.appType}}</p>
           <p> {{aplication.uploadDate | date: 'medium'}}</p>
+          <app-rating dataTarget="avg" dataApp="{{aplication._id}}"></app-rating>
           <p>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
@@ -51,6 +52,7 @@
             </label> -->
 
       </div>
+      <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating>
       <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="" class="card"></app-comment>
 
 

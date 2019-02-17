@@ -1,0 +1,7 @@
+<div style="text-align:center" *ngIf="dataTarget==='rating'">
+  <star-rating value="5" checkedcolor="gold" uncheckedcolor="black" size="30px"    readonly="false" (rate)="onRate($event)"></star-rating>
+</div>
+<div style="text-align:center" *ngIf="dataTarget==='avg'">
+  <star-rating value="{{avgValue.toString()}}" checkedcolor="gold" uncheckedcolor="black" size="24px"    readonly="true" (rate)="onRate($event)"></star-rating>
+  <p>{{avgValue}}</p>
+</div>
