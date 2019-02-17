@@ -4,8 +4,10 @@ export class Comment {
     body: string;
     appId: string;
     userId: string;
+    appName: string;
     userName: string;
     imgPath: string;
+    status: string;
     response: [
         {
             date: string;

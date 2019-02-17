@@ -12,10 +12,16 @@ export class AplicationService {
   aplications: Aplication[];
   
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this.selectedAp= new Aplication();
+  }
 
   getAplications() {
     return this.http.get(this.aplicationsUrl);
+  }
+
+  getAll(){
+    return this.http.get(this.aplicationsUrl+'/all');
   }
 
   getAplicationByID(id: String){
@@ -24,5 +30,17 @@ export class AplicationService {
 
   getAplicationsByCategory(cat: String){
     return this.http.get(this.aplicationsUrl+'/cat/'+cat);
+  }
+
+  postAplication(aplication: Aplication){
+    return this.http.post(this.aplicationsUrl, aplication);
+  }
+
+  putAplication(aplication: Aplication){
+    return this.http.put(this.aplicationsUrl+`/${aplication._id}`, aplication);
+  }
+
+  deleteAplication(_id: String){
+    return this.http.delete(this.aplicationsUrl+`/${_id}`);
   }
 }

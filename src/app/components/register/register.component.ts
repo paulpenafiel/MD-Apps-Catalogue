@@ -43,13 +43,18 @@ export class RegisterComponent implements OnInit {
 
     //required fields
     if(!this.validationService.validateCompleteness(user)){
-      this.flashMessage.show('Por favor llenar todos los campos', {cssClass: 'alert-danger', timeout: 4000});
+      this.flashMessage.show('Por favor llenar todos los campos', {cssClass: 'alert-danger', timeout: 1500});
       return false;
     }
 
     //email format validation
     if(!this.validationService.validateEmail(user.email)){
-      this.flashMessage.show('Por favor utilice un email válido', {cssClass: 'alert-danger', timeout: 4000});
+      this.flashMessage.show('Por favor utilice un email válido con formato válido', {cssClass: 'alert-danger', timeout: 1500});
+      return false;
+    }
+
+    if(!this.validationService.validateText(user.name)){
+      this.flashMessage.show('Por favor utilice solo letras para el nombre y apellido', {cssClass: 'alert-danger', timeout: 1500});
       return false;
     }
 

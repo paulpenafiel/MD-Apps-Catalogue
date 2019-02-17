@@ -22,6 +22,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { CommentComponent } from './components/comment/comment.component';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
 import { DownloadsComponent } from './components/downloads/downloads.component';
+import { AdminApplicationsComponent } from './components/admin-components/admin-applications/admin-applications.component';
+import { AdminCommentsComponent } from './components/admin-components/admin-comments/admin-comments.component';
+import { AdminEventsComponent } from './components/admin-components/admin-events/admin-events.component';
 
 
 @NgModule({
@@ -38,7 +41,10 @@ import { DownloadsComponent } from './components/downloads/downloads.component';
     CategoriesComponent,
     CommentComponent,
     CategoryDetailComponent,
-    DownloadsComponent
+    DownloadsComponent,
+    AdminApplicationsComponent,
+    AdminCommentsComponent,
+    AdminEventsComponent
   ],
   imports: [
     BrowserModule,

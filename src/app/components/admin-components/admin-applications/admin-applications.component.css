@@ -1,0 +1,16 @@
+#adminAplication-screen{
+    padding: 2%;
+}
+
+#aplication-form{
+    background-color:azure;
+    padding: 2%;
+}
+
+.actions{
+    margin-right: 20%;
+}
+
+.fas{
+    color: green;
+}

@@ -12,6 +12,7 @@ import { User } from '../../models/user';
 })
 export class CommentComponent implements OnInit {
   @Input() dataApp: string;
+  @Input() dataAppName: string;
   @Input() dataUser: string;
   @Input() dataTarget: string;
 
@@ -43,6 +44,7 @@ export class CommentComponent implements OnInit {
         body: this.body,
         appId: this.dataApp,
         userId: this.user._id,
+        appName: this.dataAppName,
         userName: this.user.name,
         imgPath: this.user.imgPath
       }

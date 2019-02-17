@@ -10,6 +10,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
 import { NewsComponent } from './components/news/news.component';
+import { AdminApplicationsComponent } from './components/admin-components/admin-applications/admin-applications.component';
+import { AdminCommentsComponent } from './components/admin-components/admin-comments/admin-comments.component';
 
 const routes: Routes = [
   {path:'', component: AplicationsComponent},
@@ -20,7 +22,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path: 'news', component: NewsComponent}
+  {path: 'news', component: NewsComponent},
+  {path: 'adminApp', component: AdminApplicationsComponent},
+  {path: 'adminComm', component: AdminCommentsComponent}
 ];
 
 @NgModule({

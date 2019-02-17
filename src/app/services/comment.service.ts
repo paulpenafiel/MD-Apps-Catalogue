@@ -13,6 +13,9 @@ export class CommentService {
 
   constructor(private http: HttpClient) { }
 
+  getAllComments(){
+    return this.http.get(this.commentsUrl);
+  }
   getCommentsByApp(idApp: string) {
     return this.http.get(this.commentsUrl + '/' + idApp);
   }
@@ -23,5 +26,9 @@ export class CommentService {
 
   createComment(newComment: Comment) {
     return this.http.post(this.commentsUrl + '/newComment', newComment);
+  }
+
+  putComment(id: string){
+    return this.http.put(this.commentsUrl+'/ban/'+id,JSON.stringify({text:''}));
   }
 }
