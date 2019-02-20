@@ -7,6 +7,8 @@ import { AplicationService } from '../../services/aplication.service';
 import {AuthenticationService} from '../../services/authentication.service';
 import { DownloadService } from '../../services/download.service';
 
+
+
 @Component({
   selector: 'app-aplication-detail',
   templateUrl: './aplication-detail.component.html',
@@ -19,11 +21,12 @@ export class AplicationDetailComponent implements OnInit {
   idUser='';
   user: User;
 
+
   constructor(private route: ActivatedRoute, 
     private aplicationService: AplicationService,
     private location: Location,
     private authService: AuthenticationService,
-    private downloadService: DownloadService) { }
+    private downloadService: DownloadService) {}
 
   ngOnInit() {
     this.getAplicaionbyId();
@@ -37,6 +40,7 @@ export class AplicationDetailComponent implements OnInit {
       console.log(err);
       return false;
     });
+    
   }
 
   getAplicaionbyId(){
@@ -62,5 +66,5 @@ export class AplicationDetailComponent implements OnInit {
     this.downloadService.registerDownload(this.newDownload).subscribe(res =>{
       
     });
-  }
+  }  
 }

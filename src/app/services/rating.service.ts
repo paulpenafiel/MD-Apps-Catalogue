@@ -16,6 +16,8 @@ export class RatingService {
   }
 
   getAverage(appId: string){
-    return this.http.get(this.ratingUrl+'/avg/'+appId);
+     return this.http.get(this.ratingUrl+'/avg/'+appId);
   }
+
+ 
 }

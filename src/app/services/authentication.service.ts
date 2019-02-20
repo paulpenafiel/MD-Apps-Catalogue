@@ -94,5 +94,9 @@ export class AuthenticationService {
   //      return false;
   //    });
   //  }
+
+  putImgPath(id: string,object: Object){
+    return this.http.put('http://localhost:3000/users/img/'+id,object);
+  }
 }
 

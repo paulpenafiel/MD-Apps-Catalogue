@@ -5,16 +5,18 @@ img {
 
 .card{
     max-width: 170px;
-    height: 280px;
+    /* height: 280px; */
 }
 
 a{
     font-size: 10px;
-    
+
 }
 p{
     font-size: 10px;
     align-self: center;
+    margin: 0;
+      /*esta es la propiedad para el interlineado*/
     
 }
 
@@ -26,12 +28,31 @@ p{
 
 #aplications_screen{
     background-color:#dddfd4 ;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);   
 }
 
 #aplication_card{
     margin-top: 6px;
     margin-bottom: 6px;
 }
+
 .checked {
     color: orange;
   }
+
+.card-image ,.card-info{
+      padding: 5px;
+}
+
+.app-name{
+    font-size: 14px;
+}
+
+.modal-app-description{
+    font-size: 14px;
+}
+
+.card-info{
+    line-height: normal;
+}

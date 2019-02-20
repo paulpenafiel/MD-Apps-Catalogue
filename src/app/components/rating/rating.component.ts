@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { StarRatingComponent } from 'ng-starrating';
 import { Rating } from '../../models/rating';
 import {RatingService} from '../../services/rating.service';
+import { stringify } from '@angular/compiler/src/util';
+import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 
 @Component({
   selector: 'app-rating',
@@ -14,12 +16,15 @@ export class RatingComponent implements OnInit {
   @Input() dataTarget: string;
   newRating: any;
   newValue: number;
-  avgValue: number;
+  avgValue: string;
+  
+  constructor(private ratingService: RatingService) { 
+  
+  }
 
-  constructor(private ratingService: RatingService) { }
-
-  ngOnInit() {
-    this.getAverage();
+  ngOnInit() { 
+    if(this.dataTarget==='avg' || this.dataTarget==='panel'){
+    this.getAverage();}
   }
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
@@ -47,7 +52,7 @@ export class RatingComponent implements OnInit {
   getAverage(){
     this.ratingService.getAverage(this.dataApp)
     .subscribe(res =>{
-      this.avgValue = res['average'];
+      this.avgValue = parseFloat(res['average']).toFixed(1);
     });
   }
 }

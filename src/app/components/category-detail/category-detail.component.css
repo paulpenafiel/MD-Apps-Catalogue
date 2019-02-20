@@ -1,9 +1,10 @@
 img {
     max-width: 100%;
+    height: auto;
 }
 
 .card{
-    max-width: 150px;
+    max-width: 170px;
 }
 
 a{
@@ -13,7 +14,7 @@ a{
 p{
     font-size: 10px;
     align-self: center;
-    
+    margin: 0;
 }
 
 #aplication-panel{
@@ -33,3 +34,19 @@ p{
 .checked {
     color: orange;
   }
+
+  .card-image ,.card-info{
+    padding: 5px;
+}
+
+.modal-app-description{
+    font-size: 14px;
+}
+
+.card-info{
+    line-height: normal;
+}
+
+.app-name{
+    font-size: 14px;
+}

@@ -2,8 +2,23 @@
 <div *ngIf="user" id="profile_screen">
   <div class="row">
   <div class="col-md-3 border">
-    <img src="{{authService.getImgPath()}}" style="width: 200px" class="img-fluid mx-auto d-block">
-    <a href="#" class="badge badge-primary d-block">Cambiar Imagen</a>
+    <!-- <img src="{{authService.getImgPath()}}" style="width: 200px" class="img-fluid mx-auto d-block"> -->
+    <img [src]="imgPath" style="width: 200px" class="img-fluid mx-auto d-block">
+    <!-- <a href="#" class="badge badge-primary d-block">Cambiar Imagen</a> -->
+    
+    <div class="input-default-wrapper mt-3 d-block">
+      <!-- <span class="input-group-text mb-3" id="input1">Cambiar</span> -->  
+      <input type="file" id="file-with-current" class="input-default-js" ng2FileSelect [uploader]="uploader">  
+      <label class="label-for-default-js rounded-right mb-3" for="file-with-current"><span class="span-choose-file">Elegir</span>    
+        <div class="float-right span-browse"></div>
+      </label>
+    </div>
+    <div *ngFor="let item of uploader.queue">
+      <p>{{item?.file?.name}}</p>
+      <!-- <p>{{item?.file?.size}}</p> -->
+      <button (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">Cargar</button>
+    </div>
+
   </div>
   <div id="user_information" class="col-md-8 border">
     <h2 class="page.header">{{user.name}}</h2>

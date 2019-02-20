@@ -10,7 +10,7 @@
           <h5>{{aplication.name | uppercase}}</h5>
           <p>type: {{aplication.appType}}</p>
           <p> {{aplication.uploadDate | date: 'medium'}}</p>
-          <app-rating dataTarget="avg" dataApp="{{aplication._id}}"></app-rating>
+          <app-rating dataTarget="avg" dataApp="{{aplication._id}}"></app-rating> 
           <p>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
@@ -19,6 +19,7 @@
             <span class="fa fa-star"></span>
             {{aplication.rating}}
           </p>
+          <!-- <star-rating value="{{avgValue.toString()}}" checkedcolor="gold" uncheckedcolor="black" size="24px"    readonly="true" (rate)="onRate($event)"></star-rating><p>{{avgValue}}</p> -->
           <!-- <p><i class="fas fa-user"></i> 0 en total</p> -->
           <app-downloads dataUser="" dataTarget="app" dataApp="{{aplication._id}}"></app-downloads>
           <div class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success" href="{{aplication.accessPath}}" (click)="registerDownload()">Acceder</a></div>
@@ -52,10 +53,8 @@
             </label> -->
 
       </div>
-      <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating>
-      <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="" class="card"></app-comment>
-
-
+      <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating> 
+      <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="app" class="card"></app-comment>
 
 
     </div>

@@ -4,7 +4,10 @@ import { FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
 import { RatingModule } from 'ng-starrating';
-
+import { CloudinaryModule, CloudinaryConfiguration, provideCloudinary} from '@cloudinary/angular-5.x';
+import * as cloudinary from 'cloudinary-core';
+import { FileUploadModule } from 'ng2-file-upload';
+import { CloudinarySettings } from './settings';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -55,7 +58,9 @@ import { RatingComponent } from './components/rating/rating.component';
     FormsModule,
     HttpClientModule,
     FlashMessagesModule,
-    RatingModule
+    RatingModule,
+    FileUploadModule,
+    CloudinaryModule.forRoot(cloudinary,CloudinarySettings)
   ],
   providers: [ValidationService, FlashMessagesService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]
