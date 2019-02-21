@@ -49,8 +49,10 @@
 
 
       <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item avatar">
-        <a class="nav-link p-0" href="#">
-          <img src="{{authService.getImgPath()}}" class="rounded-circle z-depth-0" alt="avatar image" height="35">
+          
+        <a class="nav-link " href="#">
+          <!-- <img src="{{authService.getUserName()}}" class="rounded-circle z-depth-0" alt="avatar image" height="35"> -->
+          Bienvenido {{authService.getUserName()}}!
         </a>
       </li>
     </ul>

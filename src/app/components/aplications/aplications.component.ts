@@ -9,7 +9,9 @@ import { Aplication } from '../../models/aplication';
 })
 export class AplicationsComponent implements OnInit {
 
-  aplications: Aplication[]
+  aplications: Aplication[];
+  lastAddedAplications: Aplication[];
+  lastAddedNumber: number;
   constructor(private aplicationService: AplicationService) { }
 
   ngOnInit() {
@@ -21,6 +23,16 @@ export class AplicationsComponent implements OnInit {
     .subscribe( res =>{
       this.aplications= res as Aplication[]; 
       console.log(res);
+      this.getlastAplications();
     });
+  }
+
+  getlastAplications(){
+    if(this.aplications.length > 4){
+      this.lastAddedAplications=this.aplications.slice(Math.max(this.aplications.length - 4, 1))
+    }else{
+      this.lastAddedAplications=[];
+    }
+    this.lastAddedNumber=this.lastAddedAplications.length;
   }
 }

@@ -2,3 +2,10 @@
     font-size: 10px;
 }
 
+p{
+    margin: 0;
+}
+
+.avg{
+    padding: 5%;
+}

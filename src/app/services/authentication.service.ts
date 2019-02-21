@@ -75,6 +75,10 @@ export class AuthenticationService {
     return this.user.imgPath;
   }
 
+  getUserName(){
+    return this.user.name;
+  }
+
   isAdministrator(){
     if(this.user.usertype==='administrador'){
       return true;

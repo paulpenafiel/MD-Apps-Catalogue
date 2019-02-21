@@ -5,5 +5,13 @@
 
 #posts-screen{ 
     padding-left: 2%;
-        background-color:#dddfd4 ;
+        /* background-color:#dddfd4 ; */
+        background-image: url("https://integrisok.com/-/media/Blog/18-March/rehabilitation-therapy.ashx?mh=405&mw=720&useCustomFunctions=1&as=0&relativeResize=1&revision=43de4b64-2d71-4842-8a38-5b09a1d928a6&hash=DAA5868F64D96716602CDAAFB80027D200873A83");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#source-link{
+    float: right;
 }

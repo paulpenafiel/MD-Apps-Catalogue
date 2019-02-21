@@ -8,8 +8,46 @@
 
 #aplication_screen{
     background-color:#dddfd4 ;
+    padding: 2%;
+    padding-top: 1%; 
 }
 
 #screenshots-row{
     margin-top: 2%;
+}
+
+#app-main-img{
+    max-width: 200px;
+    height: 200px;
+}
+#screenshots-row{
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+#img-galery{
+    max-width: 200px;
+}
+
+.img-section{
+    margin-left: 2%;
+}
+
+.information{
+    display: block;
+}
+
+.app-name{
+    display: inline;
+    align-content: space-between;
+}
+
+p{
+    margin:0;
+}
+
+h5{
+    font-size: 25px;
+    font-weight: bold;
+    color: green;
 }

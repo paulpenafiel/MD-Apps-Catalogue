@@ -1,17 +1,73 @@
-<!--Category Detail Screen-->
+<!--------------------Category Detail Screen-------------------->
 <div class="container" id="aplications_screen">
   <!--Category Description Box-->
   <div class="view" *ngFor="let category of selectedCategories">
     <img src="{{category.imgPath}}" class="img-fluid mx-auto d-block" alt="placeholder">
-    <div class="mask waves-effect waves-strong rgba-black-light">
+    <div class="mask waves-effect waves-strong">
     </div>
     <div class="card-row">
       <div class="card-body">
-        <h5 class="card-title">{{category.description}}</h5>
+        <h5 class="card-title" id="category-description">{{category.description}}</h5>
       </div>
     </div>
   </div>
-  <!--Aplications Panel Container-->
+</div>
+
+<!----------------------Aplications Section------------------------->
+
+<!-------------------Last Updated Aplications Panel----------------->
+<div class="container" id="aplications_screen">
+  <div class="container" id="aplication-panel">
+    <div class="border border-secondary rounded col-md-12 col-ms-12">
+      <div *ngIf="lastAddedNumber==0">La cantidad de aplicaciones es limitada</div>
+      <div *ngIf="lastAddedNumber>0" class="row">
+        <h5 class="col-md-12">Agregadas Recientemente</h5>
+        <div *ngFor="let aplication of lastAddedAplications; let idx=index" class="col-lg-3 col-md-4 col-sm-4 col-6" id="aplication_card">
+          <!--Aplication Card-->
+          <div class="card mx-auto">
+            <div class="card-image">
+              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+            </div>
+            <div class="card-info">
+              <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+              <p>{{aplication.category}}</p>
+              <p>{{aplication.appType}}</p>
+              <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
+              <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
+                Descripción</a>
+            </div>
+            <!--modal description-->
+            <div class="modal fade" attr.id="valor{{idx}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{aplication.name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="modal-app-description">{{aplication.description}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-----------------------Aplications Panel-------------------------->
+<div class="container" id="aplications_screen">
   <div class="container" id="aplication-panel">
     <div class=" border border-secondary rounded col-md-12 col-ms-12">
       <div class="row">
@@ -44,7 +100,7 @@
                     <p class="modal-app-description">{{aplication.description}}</p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                   </div>
                 </div>
               </div>

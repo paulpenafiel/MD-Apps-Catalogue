@@ -16,6 +16,8 @@ export class CategoryDetailComponent implements OnInit {
 
   aplications: Aplication[];
   selectedCategories: Category[];
+  lastAddedAplications: Aplication[];
+  lastAddedNumber: number;
 
   constructor(private route: ActivatedRoute, 
     private aplicationService: AplicationService,
@@ -40,6 +42,7 @@ export class CategoryDetailComponent implements OnInit {
     .subscribe( res =>{
       this.aplications= res as Aplication[]; 
       console.log(res);
+      this.getlastAplications();
     });
   }
 
@@ -48,7 +51,16 @@ export class CategoryDetailComponent implements OnInit {
     this.categoryService.getCategoryByName(name)
     .subscribe( res =>{
       this.selectedCategories = res as Category[]; 
-      console.log(this.selectedCategories);
+      console.log(this.selectedCategories);    
     });
+  }
+
+  getlastAplications(){
+    if(this.aplications.length > 4){
+      this.lastAddedAplications=this.aplications.slice(Math.max(this.aplications.length - 4, 1))
+    }else{
+      this.lastAddedAplications=[];
+    }
+    this.lastAddedNumber=this.lastAddedAplications.length;
   }
 }

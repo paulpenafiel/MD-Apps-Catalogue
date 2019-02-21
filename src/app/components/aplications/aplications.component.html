@@ -1,10 +1,60 @@
-<!--Aplications Panel-->
+<!--------------------Last Updated Aplications Panel---------------------->
+<div class="container" id="aplications_screen">
+  <div class="container" id="aplication-panel">
+    <div class="border border-secondary rounded col-md-12 col-ms-12">
+      <div *ngIf="lastAddedNumber==0">No hay suficientes</div>
+      <div *ngIf="lastAddedNumber>0" class="row">
+        <h5 class="col-md-12">Agregadas Recientemente</h5>
+        <div *ngFor="let aplication of lastAddedAplications; let idx=index" class="col-lg-3 col-md-4 col-sm-4 col-6" id="aplication_card">
+          <!--Aplication Card-->
+          <div class="card mx-auto">
+            <div class="card-image">
+              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+            </div>
+            <div class="card-info">
+              <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+              <p>{{aplication.category}}</p>
+              <p>{{aplication.appType}}</p>
+              <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
+              <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
+                Descripción</a>
+            </div>
+            <!--modal description-->
+            <div class="modal fade" attr.id="valor{{idx}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{aplication.name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="modal-app-description">{{aplication.description}}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------------------------Aplications Panel------------------------>
 <div class="container" id="aplications_screen">
   <!--Cards group container-->
   <div class="container" id="aplication-panel">
-    <div class="border border-secondary rounded col-md-12 col-ms-12">
+    <div class=" rounded col-md-12 col-ms-12">
       <!--All applications row-->
       <div class="row">
+          <h5 class="col-md-12">Todas</h5>
         <div *ngFor="let aplication of aplications; let idx=index" class="col-lg-3 col-md-4 col-sm-4 col-6" id="aplication_card">
           <!--Aplication Card-->
           <div class="card mx-auto">
@@ -34,7 +84,7 @@
                     <p class="modal-app-description">{{aplication.description}}</p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                   </div>
                 </div>
               </div>

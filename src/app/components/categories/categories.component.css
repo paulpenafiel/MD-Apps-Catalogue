@@ -2,14 +2,22 @@
     padding-top: 5%;
 }
 
-a:hover{
+
+
+li:hover{
     background-color: lightseagreen;
+    color: black;
 }
 
-a:active{
-  color: green;  
-}
 
 .navbar{
     background-color: rgba(44, 48, 44, 0.7);
+}
+
+.fas{
+    color: white;
+}
+
+.nav-item.active{
+    background-color: #4ABDAC;  
 }
