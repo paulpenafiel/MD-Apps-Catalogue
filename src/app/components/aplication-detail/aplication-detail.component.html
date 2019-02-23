@@ -31,7 +31,7 @@
       </div>
       <div class="card" id="description-row">
         <div class="card-body">
-          <h5 class="card-title">Descipción</h5>
+          <h3 class="section-title">Descipción</h3>
           <p class="card-text">{{aplication.description}}</p>
         </div>
       </div>
@@ -45,16 +45,17 @@
       <div class="card" id="valoration-row">
 
         <div class="card-body">
-          <h5 class="card-title">Valoración</h5>
+          <h3 class="section-title">Valoración</h3>
           <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.</p>
           <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating>
         </div>
       </div>
-      <div>
-
+      
+      <div>      
+          <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="app" class="card" style="margin-top:2%"></app-comment>
       </div>
 
-      <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="app" class="card" style="margin-top:2%"></app-comment>
+     
 
 
 

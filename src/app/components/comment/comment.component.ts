@@ -80,4 +80,19 @@ export class CommentComponent implements OnInit {
       this.getCommentsByUser();
     }
   }
+
+  addReply(event: any, idComment: string){
+    const replyBody = event.target.replyBody.value;
+    const newReply={
+      body: replyBody,
+      userId: this.user._id,
+      userName: this.user.name,
+      imgPath: this.user.imgPath
+    };
+    this.commentService.addReply(idComment, newReply)
+    .subscribe(res =>{
+      console.log('New reply saved');
+      this.validate();
+    });
+  }
 }

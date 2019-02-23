@@ -1,63 +1,88 @@
-<div class="row bootstrap snippets">
+<div class="row">
   <div class="col-md-12 col-md-offset-2 col-sm-12">
     <div class="comment-wrapper">
       <div class="panel panel-info">
+        <!------------------------------------Logged /not logged Input Commentary------------------------>
         <div id="logged-panel" *ngIf="dataTarget==='app'">
-        <div class="panel-body">
-          <!-- nuevo -->
-          <form action="">
-          <!-- <textarea class="form-control" [(ngModel)]="newbody" placeholder="Escribe un comentario" rows="3"></textarea> -->
-          <input *ngIf="authService.loggedIn()" type="text" [(ngModel)]="body" name="body">
-          <p>{{body}}</p>
-          <br>
-          <button *ngIf="authService.loggedIn()" type="button" class="btn btn-info pull-right" (click)="addComment()">Enviar</button>
-          <button *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right">Hacer un Comentario</button>
-          <!-- <p>{{user._id}}</p> -->
-          
-          <div class="clearfix"></div>
-        </form>
-          <hr>
-          <ul class="media-list">
-            <li *ngFor="let comment of comments" class="media">
-              <a href="#" class="pull-left">
-                <img src="{{comment.imgPath}}" alt="" class="img-circle">
-              </a>
-              <div class="media-body">
-                <span class="text-muted pull-right">
-                  <small class="text-muted">{{comment.date | date: 'medium'}}</small>
-                </span>
-                <strong class="text-success"> {{comment.userName}}</strong>
-                <p>{{comment.body}}</p>
-              </div>
-              <ul class="media-list" id="reply-list">
-                <li *ngFor="let reply of comment.response" class="media">
-                  <a href="#" class="pull-left">
-                    <img src="{{reply.imgPath}}" alt="" class="img-circle">
-                  </a>
+          <div class="panel-body">
+            <h3 class="section-title">Comentarios</h3>
+            <form action="">
+              <input *ngIf="authService.loggedIn()" type="text" [(ngModel)]="body" name="body">
+              <p>{{body}}</p>
+              <br>
+              <button *ngIf="authService.loggedIn()" type="button" class="btn btn-info pull-right" (click)="addComment()">Enviar</button>
+              <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" routerLink="/login">Hacer
+                un Comentario</a>
+            </form>
+            <hr>
+            <!---------------------------------Commentaries List------------------------------------------>
+            <ul class="media-list container" style="padding: 2%">
+              <li *ngFor="let comment of comments; let idx=index" class="media" style="display:block">
+                <div class="row">
+                  <div class="pull-left">
+                    <img src="{{comment.imgPath}}" alt="" class="img-circle">
+                  </div>
                   <div class="media-body">
+                    <strong class="text-success"> {{comment.userName}}</strong>
                     <span class="text-muted pull-right">
-                      <small class="text-muted">{{reply.date | date: 'medium'}}</small>
+                      <small class="text-muted">{{comment.date | date}}</small>
                     </span>
-                    <strong class="text-success"> {{reply.userName}}</strong>
-                    <p>{{reply.body}}</p>
+                    <p>{{comment.body}}</p>
                   </div>
-                  </li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+                <!----------------Replies Collapse Button---------------->
+                <div class="btn-group pull-right" id="accordion">
+                  <a type="button" data-toggle="collapse" class="float-right" data-parent="#accordion" href="#collapseOne{{idx}}">
+                    Desplegar respuestas ({{comment.response.length}})
+                  </a>
+                </div>
+                <!-----------------------Replies List-------------------->
+                <div class="row panel-collapse collapse" id="collapseOne{{idx}}">
+                  <ul class="media-list" id="reply-list">
+                    <li *ngFor="let reply of comment.response" class="reply-media">
+                      <a href="#" class="pull-left">
+                        <img src="{{reply.imgPath}}" alt="" class="img-circle" id="reply-img">
+                      </a>
+                      <div class="media-body">
+                        <strong class="text-success"> {{reply.userName}}</strong>
+                        <span class="text-muted pull-right">
+                          <small class="text-muted">{{reply.date | date}}</small>
+                        </span>
+                        <p>{{reply.body}}</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="panel-footer">
+                      <form *ngIf="authService.loggedIn()" (ngSubmit)="addReply($event, comment._id)">
+                      <div class="input-group">
+                          <!-- <input id="btn-input" type="text" class="form-control input-sm" placeholder="Escribe tu respuesta..." [(ngModel)]="replyBody" name="replyBody" /> -->
+                          <input id="btn-input" type="text" class="form-control input-sm" placeholder="Escribe tu respuesta..."  name="replyBody" />
+                          <!-- <span class="input-group-btn">
+                              <button class="btn btn-warning btn-sm" (click)="addReply(comment._id)" id="btn-chat">
+                                  Enviar</button>
+                          </span> -->
+                          <input type="submit" value="Submit">
+                      </div>
+                    </form>
+                    <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" routerLink="/login">Hacer
+                      una Respuesta</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div *ngIf="dataTarget==='profile'" class="row container">
+        <div *ngIf="dataTarget==='profile'" class="row container">
           <div class="card mb-3 col-md-12" *ngFor="let comment of comments">
-              <div class="row no-gutters">            
-                  <div class="card-body">
-                    <h5 class="card-title">{{comment.date}}</h5>
-                    <p class="card-text"><small class="text-muted">{{comment.body}}</small></p>
-                    <p class="card-text"><small class="text-muted">{{comment.appName}}</small></p>
-                  </div>
+            <div class="row no-gutters">
+              <div class="card-body">
+                <h5 class="card-title">{{comment.date}}</h5>
+                <p class="card-text"><small class="text-muted">{{comment.body}}</small></p>
+                <p class="card-text"><small class="text-muted">{{comment.appName}}</small></p>
               </div>
             </div>
-      </div>
+          </div>
+        </div>
       </div>
     </div>
 
