@@ -2,9 +2,9 @@
   <div class="card" style="margin: 2%" *ngFor="let post of posts">
     <div class="row">
       <div class="col-md-2 post-type">
-          <i *ngIf="post.postType==='Noticia'" class="fas fa-newspaper fa-5x"></i>
-          <i *ngIf="post.postType==='Evento'" class="fas fa-calendar-day fa-5x"></i>
-          <h4>{{post.postType}}</h4>
+          <i id="type-icon" *ngIf="post.postType==='Noticia'" class="fas fa-newspaper fa-5x"></i>
+          <i id="type-icon" *ngIf="post.postType==='Evento'" class="fas fa-calendar-day fa-5x"></i>
+          <h4 class="post-type">{{post.postType}}</h4>
       </div>
       <div class="col-md-9 px-3">
         <div class="card-block px-3">

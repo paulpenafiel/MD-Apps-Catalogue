@@ -15,3 +15,27 @@
 #source-link{
     float: right;
 }
+
+@media only screen and (max-width: 800px) {
+    .post-type {
+      font-size: 20px;
+    }
+    #type-icon{
+        font-size: 40px;
+    }
+    .card-title{
+        font-size: 20px;
+        text-align: center;
+    }
+    p ,a{
+        font-size: 12px;
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    .card-title{
+        font-size: 16px;
+        text-align: center;
+    }
+  }

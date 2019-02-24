@@ -11,6 +11,47 @@
 
 }
 
-#social{
-    display: inline-block;
+ #social li{
+    display: block;
+    float: inherit;
+} 
+
+.social-circle a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+    font-size:25px;
+    justify-content: space-between;
+
 }
+.social-circle a:hover{
+    color: orange;
+}
+
+@media only screen and (max-width: 800px) {
+    #follow-title {
+        display: none;
+    }
+    #social li {
+      display: inline-block;
+      margin-left: auto;
+  margin-right: auto;
+    }
+
+    .logo-inclutic{
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+    }
+
+    .inclutic-description{
+        font-size: 12px;
+    }
+
+  }

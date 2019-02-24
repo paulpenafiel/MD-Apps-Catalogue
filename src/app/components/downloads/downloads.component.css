@@ -1,0 +1,31 @@
+#downloads-row{
+    align-content: space-between;
+}
+
+p{
+    margin: 0;
+}
+h5{
+    margin:0;
+}
+.card-img{
+    margin-top: 3%;
+}
+
+@media only screen and (max-width: 800px) {
+    .card-img{
+        width: 40px;
+        height: 40px;
+    }
+    #download-card{
+        margin: 0;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    a,p{
+        display: block;
+        text-align: center;
+        margin:0;
+    }
+  }

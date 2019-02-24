@@ -20,7 +20,14 @@ export class AplicationDetailComponent implements OnInit {
   newDownload: any;
   idUser='';
   user: User;
-
+  slideConfig = {
+    "slidesToScroll": 1,
+    "slidesToShow":1,
+    "variableWidth": true, 
+    "dots":true, 
+    "infinite":true, 
+    "centerMode":true,
+    "focusOnSelect":true};
 
   constructor(private route: ActivatedRoute, 
     private aplicationService: AplicationService,
@@ -67,4 +74,8 @@ export class AplicationDetailComponent implements OnInit {
       
     });
   }  
+
+  afterChange(e) {
+    console.log('afterChange');
+  }
 }

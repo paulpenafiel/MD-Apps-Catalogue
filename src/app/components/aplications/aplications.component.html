@@ -5,7 +5,7 @@
       <div *ngIf="lastAddedNumber==0">No hay suficientes</div>
       <div *ngIf="lastAddedNumber>0" class="row">
         <h5 class="col-md-12">Agregadas Recientemente</h5>
-        <div *ngFor="let aplication of lastAddedAplications; let idx=index" class="col-lg-3 col-md-4 col-sm-4 col-6" id="aplication_card">
+        <div *ngFor="let aplication of lastAddedAplications; let idx=index" class="col-lg-3 col-md-4 col-sm-6 col-12" id="aplication_card">
           <!--Aplication Card-->
           <div class="card mx-auto">
             <div class="card-image">
@@ -55,7 +55,7 @@
       <!--All applications row-->
       <div class="row">
           <h5 class="col-md-12">Todas</h5>
-        <div *ngFor="let aplication of aplications; let idx=index" class="col-lg-3 col-md-4 col-sm-4 col-6" id="aplication_card">
+        <div *ngFor="let aplication of aplications; let idx=index" class="col-lg-3 col-md-4 col-sm-6 col-12" id="aplication_card">
           <!--Aplication Card-->
           <div class="card mx-auto">
             <div class="card-image">

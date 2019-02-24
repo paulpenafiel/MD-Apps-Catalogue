@@ -8,3 +8,36 @@
     margin-right: 2%;
     padding: 2%;
 }
+
+#user-img{
+    max-width: 150px;
+    height: 150px;
+}
+
+.profile-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card{
+    margin-left: 3%;
+}
+
+h5{
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1%;
+}
+
+@media only screen and (max-width: 500px) {
+    .profile-title{
+        font-size: 18px;
+    }
+    li{
+        font-size: 12px;
+    }
+   #downloads-panel{
+       padding-right: 10%;
+   }
+  }

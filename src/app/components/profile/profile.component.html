@@ -1,40 +1,38 @@
 <div class="container" id="total_screen">
-<div *ngIf="user" id="profile_screen">
-  <div class="row">
-  <div class="col-md-3 border">
-    <!-- <img src="{{authService.getImgPath()}}" style="width: 200px" class="img-fluid mx-auto d-block"> -->
-    <img [src]="imgPath" style="width: 200px" class="img-fluid mx-auto d-block">
-    <!-- <a href="#" class="badge badge-primary d-block">Cambiar Imagen</a> -->
-    
-    <div class="input-default-wrapper mt-3 d-block">
-      <!-- <span class="input-group-text mb-3" id="input1">Cambiar</span> -->  
-      <input type="file" id="file-with-current" class="input-default-js" ng2FileSelect [uploader]="uploader">  
-      <label class="label-for-default-js rounded-right mb-3" for="file-with-current"><span class="span-choose-file">Elegir</span>    
-        <div class="float-right span-browse"></div>
-      </label>
+  <div *ngIf="user" id="profile_screen">
+    <div class="row">
+      <!--------------------------Profile Image Card--------------------------->
+      <div class="card col-md-3" id="image-card">
+        <img [src]="imgPath" style="width: 200px" class="img-fluid mx-auto d-block" id="user-img">
+        <div class="input-default-wrapper mt-3 d-block">
+          <input type="file" id="file-with-current" class="input-default-js" ng2FileSelect [uploader]="uploader">
+          <label class="label-for-default-js rounded-right mb-3" for="file-with-current"><span class="span-choose-file">Cambiar</span>
+            <div class="float-right span-browse"></div>
+          </label>
+        </div>
+        <div *ngFor="let item of uploader.queue">
+          <p>{{item?.file?.name}}</p>
+          <button (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">Cargar</button>
+        </div>
+      </div>
+      <!---------------------------User Information Card------------------------->
+      <div id="user_information" class="col-md-8 card">
+        <h5 class="page.header profile-title">{{user.name}}</h5>
+        <ul class="list-group">
+          <li class="list-group-item"><span style="font-weight: bold;">Nombre de Usuario: </span>{{user.username}}</li>
+          <li class="list-group-item"><span style="font-weight: bold;">Tipo de Usuario: </span> {{user.usertype}}</li>
+          <li class="list-group-item"><span style="font-weight: bold;">Organización: </span> {{user.organization}}</li>
+          <li class="list-group-item"><span style="font-weight: bold;">Género: </span> {{user.gender}}</li>
+        </ul>
+      </div>
     </div>
-    <div *ngFor="let item of uploader.queue">
-      <p>{{item?.file?.name}}</p>
-      <!-- <p>{{item?.file?.size}}</p> -->
-      <button (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">Cargar</button>
+    <div class="row border" id="downloads-panel">
+      <h5>Descargas Realizadas</h5>
+      <app-downloads dataUser="{{user._id}}" dataTarget="profile" dataApp=""></app-downloads>
     </div>
-
+    <div class="border">
+      <h5>Comentarios Realizados</h5>
+      <app-comment dataApp="" dataUser="{{user._id}}" dataTarget="profile" class="card"></app-comment>
+    </div>
   </div>
-  <div id="user_information" class="col-md-8 border">
-    <h2 class="page.header">{{user.name}}</h2>
-    <ul class="list-group">
-      <li class="list-group-item">Nombre: {{user.username}}</li>
-      <li class="list-group-item">Tipo de Usuario: {{user.usertype}}</li>
-      <li class="list-group-item">Organización: {{user.organization}}</li>
-      <li class="list-group-item">Género: {{user.gender}}</li>
-    </ul>
-  </div>
-</div>
-<div class="row border">
-  <app-downloads dataUser="{{user._id}}" dataTarget="profile" dataApp=""></app-downloads>
-</div>
-<div class="row border">
-  <app-comment dataApp="" dataUser="{{user._id}}" dataTarget="profile" class="card"></app-comment>
-</div>
-</div>
 </div>

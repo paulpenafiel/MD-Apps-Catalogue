@@ -2,12 +2,13 @@
   <star-rating value="5" checkedcolor="gold" uncheckedcolor="black" size="30px"    readonly="false" (rate)="onRate($event)"></star-rating>
 </div>
 
-<div class="row avg" style="text-align:left" *ngIf="dataTarget==='avg'">
+<div  class="row avg" style="text-align:left" *ngIf="dataTarget==='avg'">
     <div>
     <span> <star-rating *ngIf="avgValue" value="{{avgValue.toString()}}" checkedcolor="gold" uncheckedcolor="black" size="30px"    readonly="true"></star-rating></span> </div> <div><h5>{{avgValue }}</h5></div> 
 </div>
 
-<div style="text-align:center" *ngIf="dataTarget==='panel'" class="row">
-  <div class="col-7">
+<div style="text-align:center" *ngIf="dataTarget==='panel'" class="">
+  <div class="">
   <star-rating *ngIf="avgValue" value="{{avgValue.toString()}}" checkedcolor="gold" uncheckedcolor="grey" size="15px"    readonly="true"></star-rating>
+</div>
 </div>

@@ -1,14 +1,16 @@
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//unpkg.com/slick-carousel@1.8.1/slick/slick.js"></script>
 <div class="container" id="aplication_screen">
   <!-- <div class="row" id="aplication-panel"> -->
   <div class="">
     <div *ngIf="aplication" class="card" id="app-panel">
 
       <div class="row" id="main-info-row">
-        <div class="col-md-3 img-section">
+        <div class="col-lg-3 col-xs-12 img-section">
           <img id="app-main-img" class="img-fluid z-depth-1 rounded" style="width: 200px" src="{{aplication.imgPath}}">
           <app-rating dataTarget="avg" dataApp="{{aplication._id}}"></app-rating>
         </div>
-        <div class="col-md-4 information">
+        <div class="col-lg-4 col-sm-12 information">
           <h5 class="text-uppercase">{{aplication.name}}</h5>
           <p><span style="font-weight: bold;">Tipo: </span>{{aplication.appType}} </p>
           <p><span style="font-weight: bold;">Plataforma: </span>{{aplication.opSystem}} </p>
@@ -19,7 +21,7 @@
           <p><span style="font-weight: bold;">Organización: </span>{{aplication.organization}}</p>
           <p><span style="font-weight: bold;">Desarrollador: </span>{{aplication.developer}}</p>
         </div>
-        <div class="col-md-3 information">
+        <div class="col-lg-3 col-sm-12 information">
           <br>
           <p><span style="font-weight: bold;">Fecha de Revisión: </span>{{aplication.uploadDate | date : "dd.MM.y"}}</p>
           <p><span style="font-weight: bold;">Fecha de Actualización: </span>{{aplication.lastUpdate | date :
@@ -31,21 +33,28 @@
       </div>
       <div class="card" id="description-row">
         <div class="card-body">
-          <h3 class="section-title">Descipción</h3>
-          <p class="card-text">{{aplication.description}}</p>
+          <h3 class="section-title" id="topic">Descipción</h3>
+          <p class="card-text" id="app-description">{{aplication.description}}</p>
         </div>
       </div>
-      <div class="row" id="screenshots-row">
+      <!-- <div class="row" id="screenshots-row">
         <div *ngFor="let galery of aplication.galery" class="col-md-4">
           <img class="img-fluid" id="img-galery" src={{galery.galpath}} alt="">
         </div>
-      </div>
+      </div> -->
+      <div style="width:80%; margin: 0 auto; display: block; margin-top:2%" class="carousel-ass">
+        <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+          <div ngxSlickItem *ngFor="let galery of aplication.galery" class="slide">
+                <img class="img-fluid" src="{{ galery.galpath }}" alt="" style="max-height:300px;" >
+          </div>
+        </ngx-slick>
+        </div>
       <!-- <div><span>id: </span>{{aplication._id}}</div> -->
 
       <div class="card" id="valoration-row">
 
         <div class="card-body">
-          <h3 class="section-title">Valoración</h3>
+          <h3 class="section-title" id="topic">Valoración</h3>
           <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.</p>
           <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating>
         </div>

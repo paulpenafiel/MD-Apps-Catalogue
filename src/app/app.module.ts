@@ -30,7 +30,7 @@ import { AdminApplicationsComponent } from './components/admin-components/admin-
 import { AdminCommentsComponent } from './components/admin-components/admin-comments/admin-comments.component';
 import { AdminEventsComponent } from './components/admin-components/admin-events/admin-events.component';
 import { RatingComponent } from './components/rating/rating.component';
-
+import { SlickModule} from 'ngx-slick';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,8 @@ import { RatingComponent } from './components/rating/rating.component';
     FlashMessagesModule,
     RatingModule,
     FileUploadModule,
-    CloudinaryModule.forRoot(cloudinary,CloudinarySettings)
+    CloudinaryModule.forRoot(cloudinary,CloudinarySettings),
+    SlickModule.forRoot()
   ],
   providers: [ValidationService, FlashMessagesService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]
