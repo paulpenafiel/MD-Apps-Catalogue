@@ -29,10 +29,6 @@ export class RatingComponent implements OnInit {
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
     this.newValue=$event.newValue;
-    // alert(`Old Value:${$event.oldValue}, 
-    //   New Value: ${$event.newValue}, 
-    //   Checked Color: ${$event.starRating.checkedcolor}, 
-    //   Unchecked Color: ${$event.starRating.uncheckedcolor}`);
     if(confirm('Desea imgrsar su valoración de '+ this.newValue)){
       this.addRating();
     }

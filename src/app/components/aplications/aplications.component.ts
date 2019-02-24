@@ -27,6 +27,7 @@ export class AplicationsComponent implements OnInit {
     });
   }
 
+  //last four aplications added to database
   getlastAplications(){
     if(this.aplications.length > 4){
       this.lastAddedAplications=this.aplications.slice(Math.max(this.aplications.length - 4, 1))

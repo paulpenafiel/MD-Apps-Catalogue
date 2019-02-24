@@ -22,7 +22,7 @@ h5{
     }
   }
 
-  @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     a,p{
         display: block;
         text-align: center;

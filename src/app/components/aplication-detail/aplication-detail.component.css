@@ -58,6 +58,7 @@ h5{
     font-weight: bold;
 }
 
+/********************Media Responsive Break Point 970px***********************/
 @media only screen and (max-width: 970px) {
     #app-main-img{
         display: block;
@@ -77,6 +78,8 @@ h5{
         text-align: center;
     }
   }
+
+  /*******************Media Responsive Break Point 500px*********************/
 @media only screen and (max-width: 500px) {
     #app-main-img{
         max-width: 100px;

@@ -1,7 +1,7 @@
 
 export class Aplication {
 
-    constructor(_id='', name='', category='', uploadDate=new Date(), description='', appType='', rating=0, imgPath='', status='',  opSystem='', register='', organization='', developer='', prerequisites='', accessPath='', lastUpdate='', currentVersion='', internetConnection=''){
+    constructor(_id='', name='', category='', uploadDate=new Date(), description='', appType='', rating=0, imgPath='', status='',  opSystem='', register='', organization='', developer='', prerequisites='', accessPath='', lastUpdate='', currentVersion='', internetConnection='', keywords=''){
         this._id=_id;
         this.name=name;
         this.category=category;
@@ -21,6 +21,7 @@ export class Aplication {
         this.lastUpdate=lastUpdate;
         this.currentVersion=currentVersion;
         this.internetConnection=internetConnection;
+        this.keywords=keywords;
     }
 
     _id: string;
@@ -44,5 +45,5 @@ export class Aplication {
     lastUpdate: string;
     currentVersion: string;
     internetConnection: string;
-
+    keywords: string;
 }

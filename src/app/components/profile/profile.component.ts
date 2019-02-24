@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.imgPath=this.authService.getImgPath();
-    //
     this.authService.getUserProfile()
     .subscribe(profile => {
       console.log(profile);
@@ -70,7 +69,6 @@ export class ProfileComponent implements OnInit {
       // this.listaImagenes.push(fileItem.data.url);
       this.imgPath=fileItem.data.url;
       console.log('smsmsmsmsm'+this.imgPath);
-      //
       this.SaveNewImage(this.user['_id']);
     }
 
@@ -87,7 +85,5 @@ export class ProfileComponent implements OnInit {
         data: JSON.parse(response)
       }
     );
-
-    
   }
 }

@@ -26,16 +26,12 @@ export class CategoryDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(val => {
-      // put the code from `ngOnInit` here
       this.getCategorybyName();
       this.getAplicaionbyCategory();
       
     });
-    // this.getCategorybyName();
-    
   }
 
-  
   getAplicaionbyCategory(){
     const cat = this.route.snapshot.paramMap.get('cat');
     this.aplicationService.getAplicationsByCategory(cat)

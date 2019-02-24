@@ -86,19 +86,7 @@ export class AuthenticationService {
       return false;
     }
   }
-  // isAdministrator(){
-  //    this.getUserProfile()
-  //    .subscribe(profile => {
-  //      console.log(profile);
-  //      this.user = profile['user'];
-      
-  //    },
-  //    err => {
-  //      console.log(err);
-  //      return false;
-  //    });
-  //  }
-
+  
   putImgPath(id: string,object: Object){
     return this.http.put('http://localhost:3000/users/img/'+id,object);
   }

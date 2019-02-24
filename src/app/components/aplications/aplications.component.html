@@ -1,3 +1,21 @@
+<div class="container" id="aplications_screen">
+  <div class="container" style="margin: 0 auto; display: block">
+   <h5 id="search-title">Panel de Búsqueda</h5>
+    <input class="span-5 border rounded" type="text" placeholder="BUSCAR" [(ngModel)]="term" style="width: 100%;">
+    <ul id="results-list" class="list-group" style="width: 100%;">
+
+      <li *ngFor="let aplication of aplications |filter:term" class="list-group-item">
+
+        <!-- <a href="" (click)="testClick(item.age)" class="button">
+          <span style="font-weight: bold">{{item.name}}</span>( {{item.keywords}} )
+        </a> -->
+        <a href=""  class="button" routerLink="/detail/{{aplication._id}}">
+          <span style="font-weight: bold">{{aplication.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 <!--------------------Last Updated Aplications Panel---------------------->
 <div class="container" id="aplications_screen">
   <div class="container" id="aplication-panel">
@@ -5,7 +23,8 @@
       <div *ngIf="lastAddedNumber==0">No hay suficientes</div>
       <div *ngIf="lastAddedNumber>0" class="row">
         <h5 class="col-md-12">Agregadas Recientemente</h5>
-        <div *ngFor="let aplication of lastAddedAplications; let idx=index" class="col-lg-3 col-md-4 col-sm-6 col-12" id="aplication_card">
+        <div *ngFor="let aplication of lastAddedAplications; let idx=index" class="col-lg-3 col-md-4 col-sm-6 col-12"
+          id="aplication_card">
           <!--Aplication Card-->
           <div class="card mx-auto">
             <div class="card-image">
@@ -54,7 +73,7 @@
     <div class=" rounded col-md-12 col-ms-12">
       <!--All applications row-->
       <div class="row">
-          <h5 class="col-md-12">Todas</h5>
+        <h5 class="col-md-12">Todas</h5>
         <div *ngFor="let aplication of aplications; let idx=index" class="col-lg-3 col-md-4 col-sm-6 col-12" id="aplication_card">
           <!--Aplication Card-->
           <div class="card mx-auto">

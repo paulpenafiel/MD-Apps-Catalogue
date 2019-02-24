@@ -2,17 +2,21 @@
   <div class="card" style="margin: 2%" *ngFor="let post of posts">
     <div class="row">
       <div class="col-md-2 post-type">
-          <i id="type-icon" *ngIf="post.postType==='Noticia'" class="fas fa-newspaper fa-5x"></i>
-          <i id="type-icon" *ngIf="post.postType==='Evento'" class="fas fa-calendar-day fa-5x"></i>
-          <h4 class="post-type">{{post.postType}}</h4>
+        <i id="type-icon" *ngIf="post.postType==='Noticia'" class="fas fa-newspaper fa-5x"></i>
+        <i id="type-icon" *ngIf="post.postType==='Evento'" class="fas fa-calendar-day fa-5x"></i>
+        <h4 class="post-type">{{post.postType}}</h4>
       </div>
       <div class="col-md-9 px-3">
         <div class="card-block px-3">
           <h4 class="card-title">{{post.title}}</h4>
-          <p *ngIf="post.postType==='Noticia'" class="card-text"><span style="font-weight: bold;">Fecha de Publicación: </span>{{post.date | date : mediumDate}}</p>
-          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Fecha: </span> {{post.date |date: mediumDate}}</p>
-          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Hora: </span> {{post.Hour}}</p>
-          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Precio: </span> {{post.price}}</p>
+          <p *ngIf="post.postType==='Noticia'" class="card-text"><span style="font-weight: bold;">Fecha de Publicación:
+            </span>{{post.date | date : mediumDate}}</p>
+          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Fecha: </span>
+            {{post.date |date: mediumDate}}</p>
+          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Hora: </span>
+            {{post.Hour}}</p>
+          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Precio: </span>
+            {{post.price}}</p>
           <p class="card-text">{{post.body}}</p>
           <a href="{{post.source}}" class="btn btn-primary" id="source-link">Ir a la Fuente</a>
         </div>

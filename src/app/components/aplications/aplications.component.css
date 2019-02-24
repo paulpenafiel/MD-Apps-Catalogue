@@ -5,7 +5,6 @@ img {
 
 .card{
     max-width: 170px;
-    /* height: 280px; */
 }
 
 a{
@@ -16,8 +15,6 @@ p{
     font-size: 10px;
     align-self: center;
     margin: 0;
-      /*esta es la propiedad para el interlineado*/
-    
 }
 
 #aplication-panel{
@@ -60,3 +57,14 @@ p{
     line-height: normal;
 }
 
+#results-list{
+    max-height: 100px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+#search-title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+}

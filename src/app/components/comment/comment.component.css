@@ -54,6 +54,7 @@ p{
     font-weight: bold;
 }
 
+/******************Media Responsive Break Ponint 500px************************/
 @media only screen and (max-width: 500px) {
     p{
         font-size: 12px;

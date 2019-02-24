@@ -53,15 +53,11 @@
                     </li>
                   </ul>
                   <div class="panel-footer">
-                      <form *ngIf="authService.loggedIn()" (ngSubmit)="addReply($event, comment._id)">
+                    <form *ngIf="authService.loggedIn()" (ngSubmit)="addReply($event, comment._id)">
                       <div class="input-group">
-                          <!-- <input id="btn-input" type="text" class="form-control input-sm" placeholder="Escribe tu respuesta..." [(ngModel)]="replyBody" name="replyBody" /> -->
-                          <input id="btn-input" type="text" class="form-control input-sm" placeholder="Escribe tu respuesta..."  name="replyBody" />
-                          <!-- <span class="input-group-btn">
-                              <button class="btn btn-warning btn-sm" (click)="addReply(comment._id)" id="btn-chat">
-                                  Enviar</button>
-                          </span> -->
-                          <input type="submit" value="Submit">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Escribe tu respuesta..."
+                          name="replyBody" />
+                        <input type="submit" value="Submit">
                       </div>
                     </form>
                     <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" routerLink="/login">Hacer
@@ -85,6 +81,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>

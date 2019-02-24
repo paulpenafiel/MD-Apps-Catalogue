@@ -31,6 +31,7 @@ import { AdminCommentsComponent } from './components/admin-components/admin-comm
 import { AdminEventsComponent } from './components/admin-components/admin-events/admin-events.component';
 import { RatingComponent } from './components/rating/rating.component';
 import { SlickModule} from 'ngx-slick';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { SlickModule} from 'ngx-slick';
     RatingModule,
     FileUploadModule,
     CloudinaryModule.forRoot(cloudinary,CloudinarySettings),
-    SlickModule.forRoot()
+    SlickModule.forRoot(),
+    Ng2SearchPipeModule
   ],
   providers: [ValidationService, FlashMessagesService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]

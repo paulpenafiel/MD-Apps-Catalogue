@@ -1,5 +1,4 @@
 .myframegmap{
-
     border: 3px solid #f6f5f0;
     border-radius: 8px;
     height: 130px;
@@ -34,6 +33,7 @@
     color: orange;
 }
 
+/************Responsive Media 800px break Point*************/
 @media only screen and (max-width: 800px) {
     #follow-title {
         display: none;

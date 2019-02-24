@@ -30,6 +30,7 @@ h5{
     margin-bottom: 1%;
 }
 
+/******************Media Responsive Break Point 500px************************/
 @media only screen and (max-width: 500px) {
     .profile-title{
         font-size: 18px;

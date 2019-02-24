@@ -75,6 +75,7 @@ export class AplicationDetailComponent implements OnInit {
     });
   }  
 
+  //Carousel Event Trigger
   afterChange(e) {
     console.log('afterChange');
   }

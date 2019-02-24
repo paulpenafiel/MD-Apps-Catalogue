@@ -2,13 +2,10 @@
     padding-top: 5%;
 }
 
-
-
 li:hover{
     background-color: lightseagreen;
     color: black;
 }
-
 
 .navbar{
     background-color: rgba(44, 48, 44, 0.7);

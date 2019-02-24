@@ -1,10 +1,9 @@
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="//unpkg.com/slick-carousel@1.8.1/slick/slick.js"></script>
 <div class="container" id="aplication_screen">
-  <!-- <div class="row" id="aplication-panel"> -->
   <div class="">
     <div *ngIf="aplication" class="card" id="app-panel">
-
+      <!--Aplication Information Section-->
       <div class="row" id="main-info-row">
         <div class="col-lg-3 col-xs-12 img-section">
           <img id="app-main-img" class="img-fluid z-depth-1 rounded" style="width: 200px" src="{{aplication.imgPath}}">
@@ -31,40 +30,37 @@
               (click)="registerDownload()">Acceder</a></div>
         </div>
       </div>
+      <!--Aplication Description Section-->
       <div class="card" id="description-row">
         <div class="card-body">
           <h3 class="section-title" id="topic">Descipción</h3>
           <p class="card-text" id="app-description">{{aplication.description}}</p>
         </div>
       </div>
-      <!-- <div class="row" id="screenshots-row">
-        <div *ngFor="let galery of aplication.galery" class="col-md-4">
-          <img class="img-fluid" id="img-galery" src={{galery.galpath}} alt="">
-        </div>
-      </div> -->
+      <!--Slick Carousel with variable width Section-->
       <div style="width:80%; margin: 0 auto; display: block; margin-top:2%" class="carousel-ass">
         <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
           <div ngxSlickItem *ngFor="let galery of aplication.galery" class="slide">
-                <img class="img-fluid" src="{{ galery.galpath }}" alt="" style="max-height:300px;" >
+            <img class="img-fluid" src="{{ galery.galpath }}" alt="" style="max-height:300px;">
           </div>
         </ngx-slick>
-        </div>
-      <!-- <div><span>id: </span>{{aplication._id}}</div> -->
-
+      </div>
+      <!--Rating Input Section-->
       <div class="card" id="valoration-row">
-
         <div class="card-body">
           <h3 class="section-title" id="topic">Valoración</h3>
-          <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.</p>
+          <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número
+            de estrellas de acuerdo a tu satisfacción.</p>
           <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating>
         </div>
       </div>
-      
-      <div>      
-          <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="app" class="card" style="margin-top:2%"></app-comment>
+      <!--Aplication Comments Section-->
+      <div>
+        <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="app" class="card"
+          style="margin-top:2%"></app-comment>
       </div>
 
-     
+
 
 
 
