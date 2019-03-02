@@ -2,11 +2,11 @@
 <div *ngIf="dataTarget==='profile'" class="row">
   <div class="card mb-3 col-lg-5" *ngFor="let download of downloads" style=" margin-left:5%; ">
     <div class="row" id="download-card">
-      <div class="col-md-3 col-xs-12">
+      <div class="col-md-3  col-xs-12">
         <a routerLink="/detail/{{download.idAplication}}">
         <img src="{{download.imgAplication}}" class="card-img" alt="..." style="max-width: 70px;"></a>
       </div>
-      <div class="col-md-7 col-xs-12">
+      <div class="col-md-7  col-xs-12">
           <a class="card-title" routerLink="/detail/{{download.idAplication}}" >{{download.nameAplication}}</a>
           <p class="card-text"><small class="text-muted">{{download.categoryAplication}}</small></p>
           <p class="card-text"><small class="text-muted">{{download.date | date}}</small></p>         

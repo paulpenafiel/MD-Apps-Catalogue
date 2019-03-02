@@ -1,6 +1,10 @@
-<div style="text-align:center" *ngIf="dataTarget==='rating'">
+<div style="text-align:center" *ngIf="dataTarget==='rating' && authService.loggedIn()">
   <star-rating value="5" checkedcolor="gold" uncheckedcolor="black" size="30px"    readonly="false" (rate)="onRate($event)"></star-rating>
 </div>
+
+<div style="text-align:center" *ngIf="dataTarget==='rating' && !authService.loggedIn()" data-toggle="tooltip" title="This is my tooltip">
+    <star-rating value="0" checkedcolor="gold" uncheckedcolor="black" size="30px"    readonly="true" (rate)="onRate($event)"></star-rating>
+  </div>
 
 <div  class="row avg" style="text-align:left" *ngIf="dataTarget==='avg'">
     <div>

@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Aplication } from '../../models/aplication';
 import { User } from '../../models/user';
 import { ActivatedRoute } from '@angular/router';
+import {Router} from '@angular/router';
 import { Location } from '@angular/common';
 import { AplicationService } from '../../services/aplication.service';
 import {AuthenticationService} from '../../services/authentication.service';
@@ -33,7 +34,8 @@ export class AplicationDetailComponent implements OnInit {
     private aplicationService: AplicationService,
     private location: Location,
     private authService: AuthenticationService,
-    private downloadService: DownloadService) {}
+    private downloadService: DownloadService,
+    private router: Router) {}
 
   ngOnInit() {
     this.getAplicaionbyId();
@@ -78,5 +80,23 @@ export class AplicationDetailComponent implements OnInit {
   //Carousel Event Trigger
   afterChange(e) {
     console.log('afterChange');
+  }
+
+  
+  isforProfesionals(){
+    if(this.aplication.category.includes('profesionales')){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  confirmPro(){
+    if(this.authService.isPro()){
+      this.registerDownload();
+      window.location.href = this.aplication.accessPath;
+    }else{
+      alert('Usted no es ningun terapista');
+    }
   }
 }

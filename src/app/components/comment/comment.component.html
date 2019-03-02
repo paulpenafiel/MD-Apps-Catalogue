@@ -6,12 +6,22 @@
         <div id="logged-panel" *ngIf="dataTarget==='app'">
           <div class="panel-body">
             <h3 class="section-title">Comentarios</h3>
+            <!--x,x,wo,xo,wox,w-->
+            <!-- <div class="card" id="valoration-row">
+                <div class="card-body">
+                  <h3 class="section-title" id="topic">Valoración</h3>
+                  <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número
+                    de estrellas de acuerdo a tu satisfacción.</p>
+                  <app-rating dataTarget="rating" dataApp="{{dataApp}}"></app-rating>
+                  </div> -->
+            <!--cmkemcmekmckemckem-->
             <form action="">
-              <input *ngIf="authService.loggedIn()" type="text" [(ngModel)]="body" name="body">
+              <!-- <input *ngIf="authService.loggedIn()" type="text" [(ngModel)]="body" name="body"> -->
+              <textarea class="form-control" *ngIf="authService.loggedIn()" [(ngModel)]="body" name="body" rows="5"></textarea>
               <p>{{body}}</p>
               <br>
               <button *ngIf="authService.loggedIn()" type="button" class="btn btn-info pull-right" (click)="addComment()">Enviar</button>
-              <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" routerLink="/login">Hacer
+              <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" data-toggle="tooltip" title="Para realizar comentarios, debes ingresar con tu cuenta de usuario" routerLink="/login">Hacer
                 un Comentario</a>
             </form>
             <hr>
@@ -31,13 +41,13 @@
                   </div>
                 </div>
                 <!----------------Replies Collapse Button---------------->
-                <div class="btn-group pull-right" id="accordion">
-                  <a type="button" data-toggle="collapse" class="float-right" data-parent="#accordion" href="#collapseOne{{idx}}">
+                <div class="btn-group media-body" id="accordion">
+                  <a type="button" data-toggle="collapse" style="margin: 0 auto; display: block" data-parent="#accordion" href="#collapseOne{{idx}}">
                     Desplegar respuestas ({{comment.response.length}})
                   </a>
                 </div>
                 <!-----------------------Replies List-------------------->
-                <div class="row panel-collapse collapse" id="collapseOne{{idx}}">
+                <div class=" panel-collapse collapse" id="collapseOne{{idx}}">
                   <ul class="media-list" id="reply-list">
                     <li *ngFor="let reply of comment.response" class="reply-media">
                       <a href="#" class="pull-left">
@@ -52,15 +62,15 @@
                       </div>
                     </li>
                   </ul>
-                  <div class="panel-footer">
+                  <div class="panel-footer" >
                     <form *ngIf="authService.loggedIn()" (ngSubmit)="addReply($event, comment._id)">
                       <div class="input-group">
                         <input id="btn-input" type="text" class="form-control input-sm" placeholder="Escribe tu respuesta..."
                           name="replyBody" />
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Enviar">
                       </div>
                     </form>
-                    <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" routerLink="/login">Hacer
+                    <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info" routerLink="/login" title="Para responder a los comentarios, debes ingresar como un usuario">Añadir
                       una Respuesta</a>
                   </div>
                 </div>

@@ -15,3 +15,9 @@ li:hover{
   .img-brand{
       width: 200px;
   }
+
+  .nav-link{
+      color:black;
+      font-family: sans-serif;
+  }
+  

@@ -36,4 +36,5 @@ export class AplicationsComponent implements OnInit {
     }
     this.lastAddedNumber=this.lastAddedAplications.length;
   }
+
 }

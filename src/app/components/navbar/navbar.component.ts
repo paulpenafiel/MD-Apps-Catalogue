@@ -3,7 +3,6 @@ import { AuthenticationService } from '../../services/authentication.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { ActivatedRoute } from '@angular/router';
-import {  User  } from '../../models/user';
 
 @Component({
   selector: 'app-navbar',
@@ -33,7 +32,7 @@ export class NavbarComponent implements OnInit {
 
   onLogoutClick(){
     this.authService.logout();
-    this.flashMessage.show('Has salido de tu cuenta', {cssClass:'alert-success', timeout: 3000});
+    this.flashMessage.show('Has salido de tu cuenta', {cssClass:'alert-success', timeout: 2000});
     this.router.navigate(['/login']);
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DownloadService } from '../../services/download.service';
 import { Download } from '../../models/download';
-import { DefaultValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-downloads',

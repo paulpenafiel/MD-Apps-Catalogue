@@ -53,6 +53,7 @@ export class CommentComponent implements OnInit {
         //this.resetForm(form);
         //M.toast({ html: 'Saved Successfuly' });
         this.validate();
+        this.body='';
       }); 
   }
 

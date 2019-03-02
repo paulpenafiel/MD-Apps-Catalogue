@@ -79,6 +79,14 @@ export class AuthenticationService {
     return this.user.name;
   }
 
+  isPro(){
+    if ( this.loggedIn() &&this.user.usertype==='Terapista'){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
   isAdministrator(){
     if(this.user.usertype==='administrador'){
       return true;

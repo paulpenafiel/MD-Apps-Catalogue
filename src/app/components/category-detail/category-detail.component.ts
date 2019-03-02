@@ -5,7 +5,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { AplicationService } from '../../services/aplication.service';
 import {CategoryService } from '../../services/category.service';
-import { NgNoValidate } from '@angular/forms/src/directives/ng_no_validate_directive';
 
 @Component({
   selector: 'app-category-detail',

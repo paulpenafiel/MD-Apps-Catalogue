@@ -4,9 +4,6 @@ import { Router   } from '@angular/router';
 
 import { ValidationService } from '../../services/validation.service';
 import { AuthenticationService } from '../../services/authentication.service';
-import { JsonPipe } from '@angular/common';
-
-
 
 @Component({
   selector: 'app-register',
@@ -61,10 +58,10 @@ export class RegisterComponent implements OnInit {
     //User register
     this.authService.registerUser(user).subscribe( data =>{
       if(data['sucess']){
-        this.flashMessage.show('Sus datos han sido registrados, y puede ingresar', {cssClass: 'alert-success', timeout: 4000});
+        this.flashMessage.show('Sus datos han sido registrados, y puede ingresar', {cssClass: 'alert-success', timeout: 2000});
         this.router.navigate(['/login']);
       } else{
-        this.flashMessage.show('Ha habido problemas al registrar su usuario', {cssClass: 'alert-danger', timeout: 4000});
+        this.flashMessage.show('Ha habido problemas al registrar su usuario', {cssClass: 'alert-danger', timeout: 2000});
       }
     })
    

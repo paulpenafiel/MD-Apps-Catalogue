@@ -21,7 +21,7 @@ export class ValidationService {
   }
 
   validateText(inputText){
-    const re =/^(([ña-zA-Z\s]+))$/;
+    const re =/^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/;
     return re.test(String(inputText).toLowerCase());
   }
 }

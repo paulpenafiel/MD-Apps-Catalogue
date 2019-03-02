@@ -1,6 +1,6 @@
 <div class="container" id="aplications_screen">
   <div class="container" style="margin: 0 auto; display: block">
-   <h5 id="search-title">Panel de Búsqueda</h5>
+    <h5 id="search-title">Panel de Búsqueda</h5>
     <input class="span-5 border rounded" type="text" placeholder="BUSCAR" [(ngModel)]="term" style="width: 100%;">
     <ul id="results-list" class="list-group" style="width: 100%;">
 
@@ -9,8 +9,8 @@
         <!-- <a href="" (click)="testClick(item.age)" class="button">
           <span style="font-weight: bold">{{item.name}}</span>( {{item.keywords}} )
         </a> -->
-        <a href=""  class="button" routerLink="/detail/{{aplication._id}}">
-          <span style="font-weight: bold">{{aplication.name}}</span>
+        <a href="" class="button" routerLink="/detail/{{aplication._id}}">
+          <span style="font-weight: bold" id="filter-term">{{aplication.name}}</span> ({{aplication.keywords}})
         </a>
       </li>
     </ul>
@@ -76,34 +76,35 @@
         <h5 class="col-md-12">Todas</h5>
         <div *ngFor="let aplication of aplications; let idx=index" class="col-lg-3 col-md-4 col-sm-6 col-12" id="aplication_card">
           <!--Aplication Card-->
-          <div class="card mx-auto">
-            <div class="card-image">
-              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
-            </div>
-            <div class="card-info">
-              <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
-              <p>{{aplication.category}}</p>
-              <p>{{aplication.appType}}</p>
-              <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
-              <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
-                Descripción</a>
-            </div>
-            <!--modal description-->
-            <div class="modal fade" attr.id="valor{{idx}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{aplication.name}}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="modal-app-description">{{aplication.description}}</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <div class="card mx-auto">
+              <div class="card-image">
+                <a  routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+              </div>
+              <div class="card-info">
+                <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+                <p>{{aplication.category}}</p>
+                <p>{{aplication.appType}}</p>
+                <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
+                <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
+                  Descripción</a>
+              </div>
+              <!--modal description-->
+              <div class="modal fade" attr.id="valor{{idx}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">{{aplication.name}}</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="modal-app-description">{{aplication.description}}</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -113,4 +114,3 @@
       </div>
     </div>
   </div>
-</div>

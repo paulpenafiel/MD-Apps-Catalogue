@@ -10,9 +10,9 @@
         <div class="card-block px-3">
           <h4 class="card-title">{{post.title}}</h4>
           <p *ngIf="post.postType==='Noticia'" class="card-text"><span style="font-weight: bold;">Fecha de Publicación:
-            </span>{{post.date | date : mediumDate}}</p>
+            </span>{{post.date | date : 'yyyy-MM-dd'}}</p>
           <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Fecha: </span>
-            {{post.date |date: mediumDate}}</p>
+            {{post.date |date: 'yyyy-MM-dd'}}</p>
           <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Hora: </span>
             {{post.Hour}}</p>
           <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;">Precio: </span>
