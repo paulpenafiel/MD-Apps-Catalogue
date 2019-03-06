@@ -2,7 +2,7 @@
 <div class="container" id="aplications_screen">
   <!--Category Description Box-->
   <div class="view" *ngFor="let category of selectedCategories">
-    <img src="{{category.imgPath}}" class="img-fluid mx-auto d-block" alt="placeholder">
+    <img src="{{category.imgPath}}" class="img-fluid mx-auto d-block" alt="imagen de categoria">
     <div class="mask waves-effect waves-strong">
     </div>
     <div class="card-row">
@@ -26,11 +26,11 @@
           <!--Aplication Card-->
           <div class="card mx-auto">
             <div class="card-image">
-              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de la {{aplication.name}}"></a>
             </div>
             <div class="card-info">
               <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
-              <p>{{aplication.category}}</p>
+              <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
               <p>{{aplication.appType}}</p>
               <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
               <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
@@ -63,9 +63,6 @@
   </div>
 </div>
 
-
-
-
 <!-----------------------Aplications Panel-------------------------->
 <div class="container" id="aplications_screen">
   <div class="container" id="aplication-panel">
@@ -75,11 +72,11 @@
           <!--Aplication Card-->
           <div class="card mx-auto">
             <div class="card-image">
-              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de {{aplication.name}}"></a>
             </div>
             <div class="card-info">
               <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
-              <p>{{aplication.category}}</p>
+              <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
               <p>{{aplication.appType}}</p>
               <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
               <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver

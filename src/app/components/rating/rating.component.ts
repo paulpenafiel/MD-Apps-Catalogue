@@ -29,7 +29,7 @@ export class RatingComponent implements OnInit {
 
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
     this.newValue=$event.newValue;
-    if(confirm('Desea imgrsar su valoración de '+ this.newValue)){
+    if(confirm('Desea ingresar su valoración de '+ this.newValue)){
       this.addRating();
     }
   }

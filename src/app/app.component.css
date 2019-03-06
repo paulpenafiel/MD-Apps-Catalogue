@@ -33,6 +33,20 @@
     color: orange;
 }
 
+.help-font{
+    font-size: 14px;
+}
+
+.modal-body{
+    height: 250px;
+    overflow-y: auto;
+}
+
+#modal-img{
+    /* max-width: 300px;
+    height: auto; */
+    margin-left: 2%;
+}
 /************Responsive Media 800px break Point*************/
 @media only screen and (max-width: 800px) {
     #follow-title {

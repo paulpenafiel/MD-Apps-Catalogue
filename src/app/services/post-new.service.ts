@@ -9,6 +9,7 @@ export class PostNewService {
 
   readonly postNewUrl= 'http://localhost:3000/posts';
   posts: PostNew[];
+  selectePost: PostNew;
 
   constructor(private http: HttpClient) { }
 
@@ -18,5 +19,9 @@ export class PostNewService {
 
   getPosts() {
     return this.http.get(this.postNewUrl);
+  }
+
+  deletePost(_id: String){
+    return this.http.delete(this.postNewUrl+`/${_id}`);
   }
 }

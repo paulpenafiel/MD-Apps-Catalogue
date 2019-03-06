@@ -6,7 +6,7 @@
       <!--Aplication Information Section-->
       <div class="row" id="main-info-row">
         <div class="col-lg-3 col-xs-12 img-section">
-          <img id="app-main-img" class="img-fluid z-depth-1 rounded" style="width: 200px" src="{{aplication.imgPath}}">
+          <img id="app-main-img" class="img-fluid z-depth-1 rounded" style="width: 200px" src="{{aplication.imgPath}}" alt="imagen de aplicación">
           <app-rating dataTarget="avg" dataApp="{{aplication._id}}"></app-rating>
         </div>
         <div class="col-lg-4 col-sm-12 information">
@@ -42,7 +42,7 @@
       <div style="width:80%; margin: 0 auto; display: block; margin-top:2%" class="carousel-ass">
         <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
           <div ngxSlickItem *ngFor="let galery of aplication.galery" class="slide">
-            <img class="img-fluid" src="{{ galery.galpath }}" alt="" style="max-height:300px;">
+            <img class="img-fluid" src="{{ galery.galpath }}" alt="imagen de galería de aplicación" style="max-height:300px;">
           </div>
         </ngx-slick>
       </div>
@@ -60,11 +60,6 @@
         <app-comment dataApp="{{aplication._id}}" dataAppName="{{aplication.name}}" dataUser="" dataTarget="app" class="card"
           style="margin-top:2%"></app-comment>
       </div>
-
-
-
-
-
     </div>
   </div>
 </div>

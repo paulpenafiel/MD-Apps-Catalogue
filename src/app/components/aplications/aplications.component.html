@@ -1,14 +1,10 @@
+<!--------------------Panel de Búsqueda-------------------->
 <div class="container" id="aplications_screen">
   <div class="container" style="margin: 0 auto; display: block">
-    <h5 id="search-title">Panel de Búsqueda</h5>
-    <input class="span-5 border rounded" type="text" placeholder="BUSCAR" [(ngModel)]="term" style="width: 100%;">
+    <h5 id="search-title">{{'Panel de Búsqueda'|translate}}</h5>
+    <input class="span-5 border rounded" type="text" placeholder="{{'Buscar'|translate}}" [(ngModel)]="term" style="width: 100%;">
     <ul id="results-list" class="list-group" style="width: 100%;">
-
       <li *ngFor="let aplication of aplications |filter:term" class="list-group-item">
-
-        <!-- <a href="" (click)="testClick(item.age)" class="button">
-          <span style="font-weight: bold">{{item.name}}</span>( {{item.keywords}} )
-        </a> -->
         <a href="" class="button" routerLink="/detail/{{aplication._id}}">
           <span style="font-weight: bold" id="filter-term">{{aplication.name}}</span> ({{aplication.keywords}})
         </a>
@@ -28,11 +24,11 @@
           <!--Aplication Card-->
           <div class="card mx-auto">
             <div class="card-image">
-              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+              <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de {{aplication.name}}"></a>
             </div>
             <div class="card-info">
               <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
-              <p>{{aplication.category}}</p>
+              <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
               <p>{{aplication.appType}}</p>
               <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
               <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
@@ -78,11 +74,11 @@
           <!--Aplication Card-->
             <div class="card mx-auto">
               <div class="card-image">
-                <a  routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}"></a>
+                <a  routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de {{aplication.name}}"></a>
               </div>
               <div class="card-info">
                 <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
-                <p>{{aplication.category}}</p>
+                <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
                 <p>{{aplication.appType}}</p>
                 <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
                 <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver

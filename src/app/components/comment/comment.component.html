@@ -6,19 +6,10 @@
         <div id="logged-panel" *ngIf="dataTarget==='app'">
           <div class="panel-body">
             <h3 class="section-title">Comentarios</h3>
-            <!--x,x,wo,xo,wox,w-->
-            <!-- <div class="card" id="valoration-row">
-                <div class="card-body">
-                  <h3 class="section-title" id="topic">Valoración</h3>
-                  <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número
-                    de estrellas de acuerdo a tu satisfacción.</p>
-                  <app-rating dataTarget="rating" dataApp="{{dataApp}}"></app-rating>
-                  </div> -->
-            <!--cmkemcmekmckemckem-->
+
+            <!--comment Form-->
             <form action="">
-              <!-- <input *ngIf="authService.loggedIn()" type="text" [(ngModel)]="body" name="body"> -->
               <textarea class="form-control" *ngIf="authService.loggedIn()" [(ngModel)]="body" name="body" rows="5"></textarea>
-              <p>{{body}}</p>
               <br>
               <button *ngIf="authService.loggedIn()" type="button" class="btn btn-info pull-right" (click)="addComment()">Enviar</button>
               <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" data-toggle="tooltip" title="Para realizar comentarios, debes ingresar con tu cuenta de usuario" routerLink="/login">Hacer
@@ -30,7 +21,7 @@
               <li *ngFor="let comment of comments; let idx=index" class="media" style="display:block">
                 <div class="row">
                   <div class="pull-left">
-                    <img src="{{comment.imgPath}}" alt="" class="img-circle">
+                    <img src="{{comment.imgPath}}" alt="imagen de usuario para comentario" class="img-circle">
                   </div>
                   <div class="media-body">
                     <strong class="text-success"> {{comment.userName}}</strong>
@@ -51,7 +42,7 @@
                   <ul class="media-list" id="reply-list">
                     <li *ngFor="let reply of comment.response" class="reply-media">
                       <a href="#" class="pull-left">
-                        <img src="{{reply.imgPath}}" alt="" class="img-circle" id="reply-img">
+                        <img src="{{reply.imgPath}}" alt="imagen de usuario para respuesta" class="img-circle" id="reply-img">
                       </a>
                       <div class="media-body">
                         <strong class="text-success"> {{reply.userName}}</strong>

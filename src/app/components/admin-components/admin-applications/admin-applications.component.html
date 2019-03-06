@@ -1,60 +1,83 @@
 <div class="container" id="adminAplication-screen">
   <div class="row">
-    <div class="col s5 card" id="aplication-form">
-      <!-- Default form login -->
-      <form class="text-center border border-light p-5">
-
-        <p class="h4 mb-4">Sign in</p>
-
-        <!-- Email -->
-        <label>Email address</label>
-        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-        <!-- Password -->
-        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-        <div class="d-flex justify-content-around">
-          <div>
-            <!-- Remember me -->
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-              <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-            </div>
-          </div>
-          <div>
-            <!-- Forgot password -->
-            <a href="">Forgot password?</a>
-          </div>
+    <!-------------------------FORM ----------------->
+    <div class="col-md-6 card" id="aplication-form" style="margin-top: 2%">
+      <h5>Registro de nuevas Aplicaciones <a data-toggle="modal" data-target="#exampleApp"><i class="far fa-comment"></i></a></h5>
+      <form  id="appForm" (ngSubmit)="addAplication($event)" style="color: #757575;">
+        <div class="form-group">
+          <p class="h4 mb-4">Información General</p>
+          <!-- Name -->
+          <input type="text" class="form-control" placeholder="Nombre de la aplicación *" name="name">
+          <!-- Type -->
+          <label style="margin-top:2%">Tipo de Aplicacación *</label>
+          <select class="browser-default custom-select" name="appType" >
+            <option>Móvil</option>
+            <option>Web</option>
+            <option>Desktop</option>
+          </select>
+          <!--Category-->
+          <label style="margin-top:2%">Categoría de Aplicacaión *</label>
+          <select class="browser-default custom-select" name="category" >
+            <option>Herramientas para usos profesionales</option>
+            <option>Herramientas de comunicación alternativa</option>
+            <option>Herramientas de autocuidado</option>
+            <option>Rampas digitales y uso del computador</option>
+            <option>Herramientas de comunicación alternativa</option>
+            <option>Aplicaciones de entretenimiento y concientización</option>
+          </select>
+          <!-- Descripción -->
+          <textarea style="margin-top:2%" class="form-control" placeholder="Descripción de la Aplicación *"
+            name="description" ></textarea>
+          <!--Access URL-->
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="URL de Acceso *" name="accessPath" >
+          <!--organization-->
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="Organización Auspiciante *" name="organization" >
+          <!--Developer-->
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="Nombre del Desarrollador *" name="developer" >
         </div>
 
-        <!-- Sign in button -->
-        <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+        <div class="form-group">
+          <p class="h4 mb-4">Información Técnica</p>
+          <!--Operative System-->
+          <input type="text" class="form-control" placeholder="Sistema operativo o navegador compatible *" name="opSystem" >
+          <!--register?-->
+          <label style="margin-top:2%">¿Requiere Registro? *</label>
+          <select class="browser-default custom-select" name="register" >
+            <option>SI</option>
+            <option>NO</option>
+          </select>
+          <!--Internet?-->
+          <label style="margin-top:2%">¿Requiere Internet? *</label>
+          <select class="browser-default custom-select" name="internetConnection" >
+            <option>SI</option>
+            <option>NO</option>
+          </select>
+          <!--last update-->
+          <label style="margin-top:2%">Fecha de Última Actualización *</label>
+          <input type="date" class="form-control" name="lastUpdate" >
+          <!--current version-->
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="Versión Actual *" name="currentVersion" >
+          <!--keywords-->
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="Palabras Claves *" name="keywords"  >
+        </div>
 
-        <!-- Register -->
-        <p>Not a member?
-          <a href="">Register</a>
-        </p>
-
-        <!-- Social login -->
-        <p>or sign in with:</p>
-
-        <a type="button" class="light-blue-text mx-2">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <i class="fab fa-github"></i>
-        </a>
-
+        <!-- Media -->
+        <div class="form-group">
+          <p class="h4 mb-4">Multimedia</p>
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="URL Logotipo *" name="imgPath" >
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="URL imagen 1 *" name="imgA" >
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="URL imagen 2 *" name="imgB" >
+          <input type="text" style="margin-top:2%" class="form-control" placeholder="URL imagen 3 *" name="imgC" >
+        </div>
+        <!-- Save button -->
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Guardar</button>
       </form>
-      <!-- Default form login -->
-    </div> -->
-    <div class="col s7">
+    </div>
+    <!------------------TABLE------------------>
+    <div class="col-md-6" style="display: inline-block;
+    overflow-y: scroll;
+    max-height:600px;
+    margin-top: 2%">
       <table class="table table-striped table-bordered">
         <thead class="black white-text">
           <th>Nombre</th>
@@ -68,9 +91,7 @@
             <td>{{aplication.category}}</td>
             <td>{{aplication.status}}</td>
             <td>
-              <!-- <a (click)="editEmployee(employee)"><i class="material-icons">edit</i></a> -->
-              <a (click)="deleteAplication(aplication._id)" class="actions"><i class="fas fa-trash-alt fa-1x"></i></a>
-              <a class="actions"><i class="fas fa-eye-slash"></i></a>
+              <a (click)="deleteAplication(aplication._id)" class="actions"><i class="fas fa-trash-alt fa-2x"></i></a>
             </td>
           </tr>
         </tbody>
@@ -78,3 +99,36 @@
     </div>
   </div>
 </div>
+
+<!---------------Ejemplo de una aplicación----------------->
+<div class="modal fade" id="exampleApp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ejemplo de una aplicación</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p class="appExample-font"><span style="font-weight: bold">Nombre: </span>Ottobock</p>
+            <p class="appExample-font"><span style="font-weight: bold">Tipo: </span>Móvil</p>
+            <p class="appExample-font"><span style="font-weight: bold">Categoría: </span>Herramientas de autocuidado</p>
+            <p class="appExample-font"><span style="font-weight: bold">Descripción: </span>La aplicación incluye una serie de ejercicios desarrollados por fisioterapeutas y dirigidos a personas con amputacion unilateral de pierna.</p>
+            <p class="appExample-font"><span style="font-weight: bold">URL de acceso: </span>https://play.google.com/store/apps/details?id=com.ottobock.fitnessapp</p>
+            <p class="appExample-font"><span style="font-weight: bold">Organización Auspiciante: </span>Ottobock Company</p>
+            <p class="appExample-font"><span style="font-weight: bold">Nombre del Desarrollador: </span>Ottobock Company</p>
+            <p class="appExample-font"><span style="font-weight: bold">Sistema operativo o navegador compatible: </span>Android 4.0 y Posteiores</p>
+            <p class="appExample-font"><span style="font-weight: bold">¿Requiere Registro?: </span>NO</p>
+            <p class="appExample-font"><span style="font-weight: bold">¿Requiere Internet?: </span>NO</p>
+            <p class="appExample-font"><span style="font-weight: bold">Fecha de actualización: </span>2017/07/20</p>
+            <p class="appExample-font"><span style="font-weight: bold">Versión Actual: </span>1.4.7</p>
+            <p class="appExample-font"><span style="font-weight: bold">Palabras clave: </span>amputación ejercicios protesis adaptación</p>
+            <p class="appExample-font"><span style="font-weight: bold">URL logotipo: </span>https://res.cloudinary.com/epn/image/upload/v1548782473/aplications/Ottobock.jpg</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -32,6 +32,10 @@ export class CommentService {
     return this.http.put(this.commentsUrl+'/ban/'+id,JSON.stringify({text:''}));
   }
 
+  allowComment(id: string){
+    return this.http.put(this.commentsUrl+'/allow/'+id, JSON.stringify({text:''}))
+  }
+
   addReply(id: string, reply:Object){
     return this.http.put(this.commentsUrl+'/reply/'+id, reply);
   }

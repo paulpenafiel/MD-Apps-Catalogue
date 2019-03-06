@@ -5,57 +5,60 @@
     <span class="navbar-toggler-icon" ></span>
   </button>
   <!--Catalogue Logo-->
-  <a class="navbar-brand" href="#">
-    <img src="https://res.cloudinary.com/epn/image/upload/v1550593383/logoCatalogo.png" alt="" class="img-fluid img-brand">
+  <a class="navbar-brand" routerLink="/aplications" id="big-brand">
+    <img src="https://res.cloudinary.com/epn/image/upload/v1550593383/logoCatalogo.png" alt="logo del sitio" class="img-fluid img-brand">
+  </a>
+  <a class="navbar-brand" routerLink="/aplications" id="small-brand">
+    <img src="https://res.cloudinary.com/epn/image/upload/v1551840371/mini-logoCat%C3%A1logo2.png" alt="logo del sitio" class="img-fluid img-brand">
   </a>
   <!--Navbar items-->
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
         data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/aplications">Aplicaciones<span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/aplications">{{'Aplicaciones' | translate}}<span class="sr-only">(current)</span></a>
       </li>
       <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact: true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/aplications">Aplicaciones<span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="/aplications">{{'Aplicaciones' | translate}}<span class="sr-only">(current)</span></a>
       </li>
       <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" data-toggle="collapse"
         data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/news">Noticias y Eventos</a>
+        <a class="nav-link" routerLink="/news">{{'Noticias' | translate}}</a>
       </li>
       <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item" [routerLinkActive]="['active']"
         data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/news">Noticias y Eventos</a>
+        <a class="nav-link" routerLink="/news">{{'Noticias' | translate}}</a>
       </li>
     </ul>
 
     <ul class="navbar-nav  my-2 my-lg-0">
       <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item" [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact: true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/profile">Mi Perfil</a>
+        <a class="nav-link" routerLink="/profile">{{'Perfil' | translate}}</a>
       </li>
       <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
         data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="/register">Registrarse</a>
+        <a class="nav-link" routerLink="/register">{{'Registrarse' | translate}}</a>
       </li>
       <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}"
         data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink="login">Ingresar</a>
+        <a class="nav-link" routerLink="login">{{'Ingresar' | translate}}</a>
       </li>
       <li *ngIf="authService.loggedIn()" class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" (click)="onLogoutClick()">Salir</a>
+        <a class="nav-link" (click)="onLogoutClick()">{{'Salir' | translate}}</a>
       </li>
       <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" data-toggle="collapse"
         data-target=".navbar-collapse.show">
-        <a class="nav-link" href="#">Ayuda</a>
+        <a class="nav-link" data-toggle="modal" data-target="#basicExampleModal"> {{'Ayuda'|translate}}</a>
       </li>
       <li *ngIf="authService.loggedIn() && authService.isAdministrator()" class="nav-item" data-toggle="collapse"
         data-target=".navbar-collapse.show">
         <a class="nav-link" routerLink="dashboard"><i class="fas fa-cog"></i></a>
       </li>
       <li *ngIf="authService.loggedIn() && !authService.isAdministrator()" class="nav-item avatar">
-        <a class="nav-link " href="#">
-          Bienvenido {{authService.getUserName()}}!
+        <a class="nav-link" routerLink="/profile" >
+        {{authService.getUserName()}}
         </a>
       </li>
     </ul>

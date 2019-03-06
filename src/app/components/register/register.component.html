@@ -1,4 +1,3 @@
-
 <!-- Material form Register-->
 <div class="d-flex justify-content-center d-flex align-items-center row" id="register_form">
   <div class="card col-md-5 col-sm-12 ">
@@ -8,52 +7,57 @@
 
     <!--Card content-->
     <div class="card-body px-lg-5 pt-0">
-      
+
       <!-- Form -->
       <form (submit)="registerUser()" class="text-center" style="color: #757575;">
 
         <div class="form-group">
-          <label>Tipo de Usuario</label>
-          <div class="md-form">
-            <select class="browser-default custom-select" [(ngModel)]="usertype" name="usertype">
-              <option>Terapista</option>
-              <option>Paciente</option>
-              <option>Cuidador</option>
-            </select>
-          </div>
+          <label>Tipo de Usuario *</label>
+          <select class="browser-default custom-select" [(ngModel)]="usertype" name="usertype">
+            <option>Terapista</option>
+            <option>Paciente</option>
+            <option>Cuidador</option>
+            <option>Público General</option>
+          </select>
         </div>
 
         <!-- Name -->
         <div class="md-form">
-            <input type="text" class="form-control" placeholder="Nombre y Apellido (Formato: caracteres alfabéticos)" [(ngModel)]="name" name="name"> 
-          </div>
+          <input type="text" class="form-control" placeholder="Nombre y Apellido (Formato: caracteres alfabéticos) *"
+            [(ngModel)]="name" name="name">
+            <p class="input-example">Ejemplo: Paúl Peñafiel </p>
+        </div>
 
         <!-- organization -->
         <div class="md-form">
-            <input type="text"  class="form-control" placeholder="Organización" [(ngModel)]="organization" name="organization">
-          </div>
+          <input type="text" class="form-control" placeholder="Organización *" [(ngModel)]="organization" name="organization">
+          <p class="input-example">Ejemplo: Escuela Politécnica Nacional </p>
+        </div>
 
-          <div class="md-form">
-              <select class="browser-default custom-select" [(ngModel)]="gender" name="gender">
-                <option>Masculino</option>
-                <option>Femenino</option>              
-              </select>
-            </div>
-        
-        <label>Datos de autenticación</label>
+        <label>Genero *</label>
+        <select class="browser-default custom-select" [(ngModel)]="gender" name="gender">
+          <option>Masculino</option>
+          <option>Femenino</option>
+        </select>
+
+        <hr>
+        <p>Datos de autenticación</p>
         <!-- userName -->
         <div class="md-form">
-            <input type="text"  class="form-control" placeholder="Nombre de Usuario" [(ngModel)]="username" name="username">
-          </div>
+          <input type="text" class="form-control" placeholder="Nombre de Usuario *" [(ngModel)]="username" name="username">
+          <p class="input-example">Ejemplo: ppenafiel </p>
+        </div>
 
         <!-- Email -->
         <div class="md-form">
-          <input type="email"  class="form-control" placeholder="correo electrónico (Formato: [text]@[domino])" [(ngModel)]="email" name="email">
+          <input type="email" class="form-control" placeholder="correo electrónico (Formato: [text]@[domino]) *"
+            [(ngModel)]="email" name="email">
+            <p class="input-example">Ejemplo: pulskatezero@hotmail.com </p>
         </div>
 
         <!-- Password -->
         <div class="md-form">
-          <input type="password"  class="form-control" placeholder="Contraseña" [(ngModel)]="password" name="password">
+          <input type="password" class="form-control" placeholder="Contraseña *" [(ngModel)]="password" name="password">
         </div>
 
         <!-- Sign up button -->

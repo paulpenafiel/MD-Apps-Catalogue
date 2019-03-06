@@ -1,0 +1,12 @@
+.fas{
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+  }

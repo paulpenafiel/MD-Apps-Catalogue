@@ -1,0 +1,22 @@
+{
+    "Aplicaciones": "Aplications",
+    "Noticias": "News and Events",
+    "Registrarse": "Sign Up",
+    "Ingresar": "Sign In",
+    "Perfil": "My Profile",
+    "Ayuda" : "Help",
+    "Salir" : "Sign off",
+    "Siguenos": "Follow us",
+    "Contáctanos": "Contact us",
+    "Visítanos":"Visit us",
+    "Panel de Búsqueda":"Search section",
+    "Buscar":"Search",
+    "categoria":{
+        "alternativa":"Alternative communication tools",
+        "rampa":"Digital badges and computer use",
+        "profesionales":"Tools for professional activities",
+        "autocuidado":"Self-care tools",
+        "movilidad":"Accessible mobility tools",
+        "entretenimiento":"Entertainment and Awareness Apps"
+    }
+}

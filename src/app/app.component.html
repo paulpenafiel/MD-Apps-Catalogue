@@ -1,8 +1,38 @@
 <div class="fixed-top">
   <app-navbar></app-navbar>
   <flash-messages class="fixed-top"></flash-messages>
-
 </div>
+<!----------------------Modal Help----------------->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Información Y Utilización del Sitio</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="help-font">Éste sitio es un compendio de aplicaciones para dispositivos móviles, computador o para internet, que están enfocadas en el ambito de la discapacidad motora. </p>
+          <p style="font-weight: bold">1. ¿Cómo acceder a las aplicaciones?</p>
+          <p class="help-font">Se puede acceder a las aplicaciones mediante la barra de categorías o mediante la barra de búsqueda de la página inicial.</p>
+          <!-- <img src="http://mouse.latercera.com/wp-content/uploads/2017/08/facebook-900x600.jpg" alt="" class="img-fluid" id="modal-img">  <img src="http://mouse.latercera.com/wp-content/uploads/2017/08/facebook-900x600.jpg" alt="" class="" id="modal-img"> -->
+          
+          <p class="help-font">Cada aplicación es presentada en una tarjeta en la que se encuentra su nombre, lotipo, tipo y rating. Si se realiza un clic sobre la imagen o el nombre se puede acceder a una pantalla con la información completa de la aplicación, y con un botón que direcciona a la pagina oficial de la aplicación requerida.</p>
+           <!-- <img src="http://mouse.latercera.com/wp-content/uploads/2017/08/facebook-900x600.jpg" alt="" class="img-fluid" id="modal-img">  <img src="http://mouse.latercera.com/wp-content/uploads/2017/08/facebook-900x600.jpg" alt="" class="" id="modal-img"> -->
+          <p style="font-weight: bold">2. ¿Se puede acceder a todas las aplicaciones?</p>
+          <p class="help-font">Las aplicaciones categorizadas como Herramientas para usos profesionales pueden ser accedidas solo si has creado una cuenta de usuario, especificando que eres un terapista o profesional de la rehabilitación.</p>
+          <p style="font-weight: bold">¿Para qué registrarme?</p>
+          <p class="help-font">Si eres un usuario registrado, cuentas con un perfil de usuario en el que se mostraran las aplicaciones a las que has accedido. También puedes realizar puntuaciones a las aplicaciones y comentarios que serán respondidos por los administradores o por otros usuarios del sitio.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--------------------End Modal Help--------------->
 <app-categories></app-categories>
 <router-outlet></router-outlet>
 
@@ -25,7 +55,7 @@
       <hr class="clearfix w-100 d-md-none pb-3">
       <div class="col-md-2 mb-md-0 mb-3">
         <!-- Social Network Links -->
-        <h5 class="text-uppercase" id="follow-title">Siguenos</h5>
+        <h5 class="text-uppercase" id="follow-title">{{'Siguenos'|translate}}</h5>
         <ul class="social-network social-circle" id="social">
           <li>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -41,7 +71,7 @@
       <!-----------------Contact Information------------------->
       <div class="col-md-3 mb-md-0 mb-3">
         <!-- Links -->
-        <h5 class="text-uppercase">Contáctanos</h5>
+        <h5 class="text-uppercase">{{'Contáctanos'|translate}}</h5>
         <ul class="list-unstyled" id="social">
 
         </ul>
@@ -49,7 +79,7 @@
       <!-- Grid column -->
       <div class="col-md-4 mb-md-0 mb-3">
         <!---------------- EPN Location Section--------------------->
-        <h5 class="text-uppercase">Visítanos</h5>
+        <h5 class="text-uppercase">{{'Visítanos'|translate}}</h5>
         <ul class="list-unstyled">
           <li>
             <p class="fas fa-map-marker-alt font-weight-ligh"> Ladron de Guevara E11-253 Quito, Ecuador</p>
@@ -65,6 +95,12 @@
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
     <a href="https://www.epn.edu.ec/"> Escuela Politécnica Nacional</a>
+    <div style="float:right">
+        <button [ngClass]="{'active': activeLang == 'es'}" (click)="changeLanguage('es')">Es</button>
+        <button [ngClass]="{'active': activeLang == 'en'}" (click)="changeLanguage('en')">En</button>
+      </div>
   </div>
+  
   <!-- Copyright -->
 </footer>
+

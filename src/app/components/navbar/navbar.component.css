@@ -16,8 +16,27 @@ li:hover{
       width: 200px;
   }
 
+  #small-brand{
+    display: none;
+  }
+
   .nav-link{
       color:black;
       font-family: sans-serif;
   }
   
+  @media only screen and (max-width: 800px) {
+    #big-brand{
+        display: none;
+    }
+
+    #small-brand{
+        display: inherit;
+        width: 60px;
+        height: 50px;
+    }
+
+    #download-card{
+        margin: 0;
+    }
+  }

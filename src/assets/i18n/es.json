@@ -1,0 +1,22 @@
+{
+    "Aplicaciones":"Aplicaciones",
+    "Noticias": "Noticias y Eventos",
+    "Registrarse": "Registrarse",
+    "Ingresar": "Ingresar",
+    "Perfil": "Mi Perfil",
+    "Ayuda" : "Ayuda",
+    "Salir" : "Salir",
+    "Siguenos": "Siguenos",
+    "Contáctanos": "Contáctanos",
+    "Visítanos":"Visítanos",
+    "Panel de Búsqueda":"Panel de Búsqueda",
+    "Buscar":"Buscar",
+    "categoria":{
+        "alternativa":"Herramientas de comunicación alternativa",
+        "rampa":"Rampas digitales y uso del computador",
+        "profesionales":"Herramientas para usos profesionales",
+        "autocuidado":"Herramientas de autocuidado",
+        "movilidad":"Aplicaciones de movilidad accesible",
+        "entretenimiento":"Aplicaciones de entretenimiento y concientización"
+    }
+}

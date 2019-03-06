@@ -11,11 +11,12 @@
             <form (submit)="loginUserSubmit()" class="text-center" style="color: #757575;">
                 <!-- userName -->
                 <div class="md-form">
-                    <input type="text" class="form-control" placeholder="Nombre de Usuario "  [(ngModel)]="username" name="username">
+                    <input type="text" class="form-control" placeholder="Nombre de Usuario *"  [(ngModel)]="username" name="username">
+                    <p class="input-example">Ejemplo: ppenafiel </p>
                 </div>
                 <!-- Password -->
                 <div class="md-form">
-                    <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="password" name="password">
+                    <input type="password" class="form-control" placeholder="Contraseña *" [(ngModel)]="password" name="password">
                 </div>
                 <!-- Sign in button -->
                 <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" >Ingresar</button>

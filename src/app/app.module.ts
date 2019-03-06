@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
 import { RatingModule } from 'ng-starrating';
 import { CloudinaryModule, CloudinaryConfiguration, provideCloudinary} from '@cloudinary/angular-5.x';
 import * as cloudinary from 'cloudinary-core';
 import { FileUploadModule } from 'ng2-file-upload';
 import { CloudinarySettings } from './settings';
+//Translation
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+//Components and services
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AplicationsComponent } from './components/aplications/aplications.component';
@@ -63,7 +67,16 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FileUploadModule,
     CloudinaryModule.forRoot(cloudinary,CloudinarySettings),
     SlickModule.forRoot(),
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http);
+        },
+        deps: [ HttpClient ]
+      }
+    })
   ],
   providers: [ValidationService, FlashMessagesService, AuthenticationService, AuthGuard],
   bootstrap: [AppComponent]

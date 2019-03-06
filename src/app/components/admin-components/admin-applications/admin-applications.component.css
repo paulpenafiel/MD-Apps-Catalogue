@@ -14,3 +14,25 @@
 .fas{
     color: green;
 }
+
+td{
+    text-align: center;
+}
+
+table {
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.fa-comment:hover{
+color:red;
+}
+
+.appExample-font{
+    font-size: 14px;
+}
+
+.modal-body{
+    height: 250px;
+    overflow-y: auto;
+}

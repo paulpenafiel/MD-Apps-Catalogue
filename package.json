@@ -23,6 +23,8 @@
     "@angular/router": "~7.1.0",
     "@auth0/angular-jwt": "^2.1.0",
     "@cloudinary/angular-5.x": "^1.0.2",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
     "angular2-flash-messages": "^3.0.1",
     "bootstrap": "^4.2.1",
     "cloudinary-core": "^2.6.2",

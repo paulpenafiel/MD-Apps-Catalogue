@@ -12,6 +12,7 @@ import { CategoryDetailComponent } from './components/category-detail/category-d
 import { NewsComponent } from './components/news/news.component';
 import { AdminApplicationsComponent } from './components/admin-components/admin-applications/admin-applications.component';
 import { AdminCommentsComponent } from './components/admin-components/admin-comments/admin-comments.component';
+import { AdminEventsComponent } from './components/admin-components/admin-events/admin-events.component';
 
 const routes: Routes = [
   {path:'', component: AplicationsComponent},
@@ -23,8 +24,9 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path: 'news', component: NewsComponent},
-  {path: 'adminApp', component: AdminApplicationsComponent},
-  {path: 'adminComm', component: AdminCommentsComponent}
+  {path: 'adminApp', component: AdminApplicationsComponent,canActivate:[AuthGuard]},
+  {path: 'adminComm', component: AdminCommentsComponent,canActivate:[AuthGuard]},
+  {path: 'adminEvents', component: AdminEventsComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({

@@ -33,4 +33,14 @@ export class AdminCommentsComponent implements OnInit {
       });
     }
   }
+
+  allowComment(_id: string){
+    if(confirm('¿Estás seguro de permitir el comentario?')){
+      this.commentService.allowComment(_id)
+      .subscribe(res =>{
+        this.getAllComments();
+      });
+    }
+  }
+
 }
