@@ -2,10 +2,10 @@
 <div class="container" id="aplications_screen">
   <div class="container" style="margin: 0 auto; display: block">
     <h5 id="search-title">{{'Panel de Búsqueda'|translate}}</h5>
-    <input class="span-5 border rounded" type="text" placeholder="{{'Buscar'|translate}}" [(ngModel)]="term" style="width: 100%;">
+    <input class="span-5 border rounded" type="text" placeholder="{{'Buscar'|translate}}" [(ngModel)]="term" style="width: 100%;" title="filtro">
     <ul id="results-list" class="list-group" style="width: 100%;">
       <li *ngFor="let aplication of aplications |filter:term" class="list-group-item">
-        <a href="" class="button" routerLink="/detail/{{aplication._id}}">
+        <a href="" class="button" routerLink="/detail/{{aplication._id}}" style="color: #092d53">
           <span style="font-weight: bold" id="filter-term">{{aplication.name}}</span> ({{aplication.keywords}})
         </a>
       </li>
@@ -27,12 +27,11 @@
               <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de {{aplication.name}}"></a>
             </div>
             <div class="card-info">
-              <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+              <a routerLink="/detail/{{aplication._id}}" class="app-name">{{aplication.name}}</a>
               <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
               <p>{{aplication.appType}}</p>
               <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
-              <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
-                Descripción</a>
+              <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">{{'Ver descripción'|translate}}</a>
             </div>
             <!--modal description-->
             <div class="modal fade" attr.id="valor{{idx}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -77,12 +76,11 @@
                 <a  routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de {{aplication.name}}"></a>
               </div>
               <div class="card-info">
-                <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+                <a routerLink="/detail/{{aplication._id}}" class="app-name">{{aplication.name}}</a>
                 <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
                 <p>{{aplication.appType}}</p>
                 <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
-                <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">Ver
-                  Descripción</a>
+                <a data-toggle="modal" style="text-align: center; display: block;" [attr.data-target]="'#valor' + idx">{{'Ver descripción'|translate}}</a>
               </div>
               <!--modal description-->
               <div class="modal fade" attr.id="valor{{idx}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

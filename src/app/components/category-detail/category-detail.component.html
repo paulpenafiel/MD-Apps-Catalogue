@@ -7,6 +7,7 @@
     </div>
     <div class="card-row">
       <div class="card-body">
+        <h5 class="card-title" id="category-name">{{category.name}}</h5>
         <h5 class="card-title" id="category-description">{{category.description}}</h5>
       </div>
     </div>
@@ -29,7 +30,7 @@
               <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de la {{aplication.name}}"></a>
             </div>
             <div class="card-info">
-              <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+              <a routerLink="/detail/{{aplication._id}}" class="app-name">{{aplication.name}}</a>
               <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
               <p>{{aplication.appType}}</p>
               <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>
@@ -75,7 +76,7 @@
               <a routerLink="/detail/{{aplication._id}}"><img src="{{aplication.imgPath}}" alt="imagen de {{aplication.name}}"></a>
             </div>
             <div class="card-info">
-              <a routerLink="/detail/{{aplication._id}}" class="blue-text app-name">{{aplication.name}}</a>
+              <a routerLink="/detail/{{aplication._id}}" class="app-name">{{aplication.name}}</a>
               <p style="font-size: 11px; font-family: sans-serif">{{aplication.category}}</p>
               <p>{{aplication.appType}}</p>
               <app-rating dataTarget="panel" dataApp="{{aplication._id}}"></app-rating>

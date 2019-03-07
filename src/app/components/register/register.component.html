@@ -13,7 +13,7 @@
 
         <div class="form-group">
           <label>Tipo de Usuario *</label>
-          <select class="browser-default custom-select" [(ngModel)]="usertype" name="usertype">
+          <select class="browser-default custom-select" [(ngModel)]="usertype" name="usertype" title="tipo de usuario">
             <option>Terapista</option>
             <option>Paciente</option>
             <option>Cuidador</option>
@@ -24,18 +24,18 @@
         <!-- Name -->
         <div class="md-form">
           <input type="text" class="form-control" placeholder="Nombre y Apellido (Formato: caracteres alfabéticos) *"
-            [(ngModel)]="name" name="name">
+            [(ngModel)]="name" name="name" title="nombre">
             <p class="input-example">Ejemplo: Paúl Peñafiel </p>
         </div>
 
         <!-- organization -->
         <div class="md-form">
-          <input type="text" class="form-control" placeholder="Organización *" [(ngModel)]="organization" name="organization">
+          <input type="text" class="form-control" placeholder="Organización *" [(ngModel)]="organization" name="organization" title="organización">
           <p class="input-example">Ejemplo: Escuela Politécnica Nacional </p>
         </div>
 
         <label>Genero *</label>
-        <select class="browser-default custom-select" [(ngModel)]="gender" name="gender">
+        <select class="browser-default custom-select" [(ngModel)]="gender" name="gender" title="género">
           <option>Masculino</option>
           <option>Femenino</option>
         </select>
@@ -44,20 +44,20 @@
         <p>Datos de autenticación</p>
         <!-- userName -->
         <div class="md-form">
-          <input type="text" class="form-control" placeholder="Nombre de Usuario *" [(ngModel)]="username" name="username">
+          <input type="text" class="form-control" placeholder="Nombre de Usuario *" [(ngModel)]="username" name="username" title="pseudónimo">
           <p class="input-example">Ejemplo: ppenafiel </p>
         </div>
 
         <!-- Email -->
         <div class="md-form">
           <input type="email" class="form-control" placeholder="correo electrónico (Formato: [text]@[domino]) *"
-            [(ngModel)]="email" name="email">
+            [(ngModel)]="email" name="email" title="e-mail">
             <p class="input-example">Ejemplo: pulskatezero@hotmail.com </p>
         </div>
 
         <!-- Password -->
         <div class="md-form">
-          <input type="password" class="form-control" placeholder="Contraseña *" [(ngModel)]="password" name="password">
+          <input type="password" class="form-control" placeholder="Contraseña *" [(ngModel)]="password" name="password" title="contraseña">
         </div>
 
         <!-- Sign up button -->

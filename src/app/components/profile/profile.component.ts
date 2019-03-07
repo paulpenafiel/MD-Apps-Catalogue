@@ -35,7 +35,7 @@ export class ProfileComponent implements OnInit {
   }
 
   SaveNewImage(_id: string){
-    if(confirm('¿Estás seguro de bloquear el comentario?')){
+    if(confirm('¿Estás seguro de almacenar tu imagen de perfil?')){
       const object={
         imgPath: this.imgPath
       }

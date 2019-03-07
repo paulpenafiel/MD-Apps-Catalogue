@@ -96,7 +96,7 @@ export class AplicationDetailComponent implements OnInit {
       this.registerDownload();
       window.location.href = this.aplication.accessPath;
     }else{
-      alert('Usted no es ningun terapista');
+      alert('Para acceder a las aplicaiones de Uso Profesional debe: Iniciar sesión y su tipo de usuario debe ser "Terapista"');
     }
   }
 }
