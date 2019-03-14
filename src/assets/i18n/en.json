@@ -11,6 +11,12 @@
     "Visítanos":"Visit us",
     "Panel de Búsqueda":"Search section",
     "Buscar":"Search",
+    "Agregadas Recientemente":"Recently added",
+    "Todas":"All",
+    "Móvil":"Mobile",
+    "Web":"Web",
+    "Desktop":"Desktop",
+    "La cantidad de aplicaciones es limitada":"There is not enough aplications",
     "categoria":{
         "alternativa":"Alternative communication tools",
         "rampa":"Digital badges and computer use",
@@ -20,5 +26,26 @@
         "entretenimiento":"Entertainment and Awareness Apps"
     },
     "incluticDesc":"INCLTICS is a National Polytechnic School project, which allows people to access social inclusion applications. The team has professionals who can help you find technological resources that can meet your needs.",
-    "Ver descripción":"read description"
+    "VER DESCRIPCIÓN":"READ DESCRIPTION",
+    "Aplicaciones de entretenimiento y concientización":"Entertainment and Awareness Apps",
+    "Herramientas de comunicación alternativa":"Alternative communication tools",
+    "Rampas digitales y uso del computador":"Digital badges and computer use",
+    "Herramientas para usos profesionales":"Tools for professional activities",
+    "Aplicaciones de movilidad accesible":"Accessible mobility tools",
+    "Herramientas de autocuidado":"Self-care tools",
+    "Programas de software que utilizan gráficos, pictogramas, y sintetizadores de voz para que personas con limitaciones de movilidad puedan establecer comunicación.":"Software programs that use graphics, pictograms, and speech synthesizers to help people with mobility limitations in their communication",
+    "Recursos tecnológicos que permiten acceder a la tecnología y utilizar el computador a todas las personas, independientemente de sus limitaciones de movilidad":"Technological resources that allow access to technology and use the computer to all people, regardless of their mobility limitations",
+    "Software que los profesionales de terapia pueden utilizar en actividades como: consulta, investigación, diagnóstico, rehabilitación y control.":"Software that therapy professionals can use in activities such as: consultation, research, diagnosis, rehabilitation and control",
+    "Software que puede ser utilizado para la práctica de actividades destinadas a mantener o mejorar las condiciones de salud física.":"Software that can be used to practice activities designed to maintain or improve physical health conditions.",
+    "Software que permite identificar lugares que carecen de barreras arquitectónicas y posibilitan el acceso a las personas independientemente de sus limitaciones físicas":"Software that allows to identify places that lack architectural barriers and allow access to people regardless of their physical limitations",
+    "Software de entretenimiento y aprendizaje que permite percibir la realidad de las personas con limitaciones motoras.":"Entertainment and learning software that allows to perceive the reality of people with motor limitations.",
+    "Evento":"Event",
+    "Noticia":"New",
+    "Ir a la Fuente":"Visit Source",
+    "Fecha:":"Date:",
+    "Hora:":"Time:",
+    "Precio:":"Price:",
+    "Fecha de Publicación:":"Publish Date",
+    "Acceder":"Get In"
+    
 }

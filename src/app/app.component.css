@@ -2,7 +2,7 @@
     border: 3px solid #f6f5f0;
     border-radius: 8px;
     height: 130px;
-    width: 80%;
+    width: 90%;
     box-shadow: 0px 0px 3px 3px #e7e4dc;
     overflow: hidden;
     position: relative;
@@ -12,7 +12,6 @@
 
  #social li{
     display: block;
-    float: inherit;
 } 
 
 .social-circle a {
@@ -22,7 +21,7 @@
 	-moz-border-radius:50%;
 	-webkit-border-radius:50%;
 	border-radius:50%;
-	text-align:center;
+	text-align:left;
 	width: 50px;
 	height: 50px;
     font-size:25px;
@@ -31,6 +30,12 @@
 }
 .social-circle a:hover{
     color: orange;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: all 0.5s ease-in-out 0s;
+    -ms-transform-origin: 10% 30%; /* IE 9 */
+    -webkit-transform-origin: 10% 30%; /* Safari 3-8 */
+    transform-origin: 10% 30%;
 }
 
 .help-font{
@@ -38,7 +43,7 @@
 }
 
 .modal-body{
-    height: 250px;
+    height: 275px;
     overflow-y: auto;
 }
 
@@ -51,10 +56,19 @@
 .contact-li{
     display: block;
 }
+
+#welcome-title{ 
+    color: blue;
+    font-weight: bold;
+}
+
+#exampleModalLabel{
+    text-align: center;
+}
 /************Responsive Media 800px break Point*************/
 @media only screen and (max-width: 800px) {
     #follow-title {
-        display: none;
+        display: block;
     }
     #social li {
       display: inline-block;

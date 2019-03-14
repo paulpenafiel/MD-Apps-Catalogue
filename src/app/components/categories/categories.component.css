@@ -4,6 +4,9 @@
 
 li:hover{
     background-color: lightseagreen;
+}
+
+li:hover i{
     color: black;
 }
 
@@ -18,3 +21,4 @@ li:hover{
 .nav-item.active{
     background-color: #4ABDAC;  
 }
+

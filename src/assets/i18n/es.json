@@ -11,6 +11,12 @@
     "Visítanos":"Visítanos",
     "Panel de Búsqueda":"Panel de Búsqueda",
     "Buscar":"Buscar",
+    "Agregadas Recientemente":"Agregadas Recientemente",
+    "Todas":"Todas",
+    "Móvil":"Móvil",
+    "Web":"Web",
+    "Desktop":"Escritorio",
+    "La cantidad de aplicaciones es limitada":"La cantidad de aplicaciones es limitada",
     "categoria":{
         "alternativa":"Herramientas de comunicación alternativa",
         "rampa":"Rampas digitales y uso del computador",
@@ -20,6 +26,25 @@
         "entretenimiento":"Aplicaciones de entretenimiento y concientización"
     },
     "incluticDesc":"incluTICS es un proyecto de la Escuela Politécnica Nacional, que permite a las personas acceder a aplicaciones de inclusión social. El equipo de trabajo cuenta con profesionales que podrán ayudarte a encontrar recursos tecnológicos que puedan satisfacer tus necesidades.",
-    "Ver descripción":"Ver descripción"
-    
+    "VER DESCRIPCIÓN":"VER DESCRIPCIÓN",
+    "Aplicaciones de entretenimiento y concientización":"Aplicaciones de entretenimiento y concientización",
+    "Herramientas de comunicación alternativa":"Herramientas de comunicación alternativa",
+    "Rampas digitales y uso del computador":"Rampas digitales y uso del computador",
+    "Herramientas para usos profesionales":"Herramientas para usos profesionales",
+    "Aplicaciones de movilidad accesible":"Aplicaciones de movilidad accesible",
+    "Herramientas de autocuidado":"Herramientas de autocuidado",
+    "Programas de software que utilizan gráficos, pictogramas, y sintetizadores de voz para que personas con limitaciones de movilidad puedan establecer comunicación.":"Programas de software que utilizan gráficos, pictogramas, y sintetizadores de voz para que personas con limitaciones de movilidad puedan establecer comunicación",
+    "Recursos tecnológicos que permiten acceder a la tecnología y utilizar el computador a todas las personas, independientemente de sus limitaciones de movilidad":"Recursos tecnológicos que permiten acceder a la tecnología y utilizar el computador a todas las personas, independientemente de sus limitaciones de movilidad",
+    "Software que los profesionales de terapia pueden utilizar en actividades como: consulta, investigación, diagnóstico, rehabilitación y control.":"Software que los profesionales de terapia pueden utilizar en actividades como: consulta, investigación, diagnóstico, rehabilitación y control.",
+    "Software que puede ser utilizado para la práctica de actividades destinadas a mantener o mejorar las condiciones de salud física.":"Software que puede ser utilizado para la práctica de actividades destinadas a mantener o mejorar las condiciones de salud física.",
+    "Software que permite identificar lugares que carecen de barreras arquitectónicas y posibilitan el acceso a las personas independientemente de sus limitaciones físicas":"Software que permite identificar lugares que carecen de barreras arquitectónicas y posibilitan el acceso a las personas independientemente de sus limitaciones físicas",
+    "Software de entretenimiento y aprendizaje que permite percibir la realidad de las personas con limitaciones motoras.":"Software de entretenimiento y aprendizaje que permite percibir la realidad de las personas con limitaciones motoras.",
+    "Evento":"Evento",
+    "Noticia":"Noticia",
+    "Ir a la Fuente":"Ir a la Fuente",
+    "Fecha:":"Fecha:",
+    "Hora:":"Hora:",
+    "Precio:":"Precio:",
+    "Fecha de Publicación:":"Fecha de Publicación:",
+    "Acceder":"Acceder"
 }

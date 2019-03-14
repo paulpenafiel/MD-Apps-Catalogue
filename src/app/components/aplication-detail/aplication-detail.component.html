@@ -11,12 +11,12 @@
         </div>
         <div class="col-lg-4 col-sm-12 information">
           <h5 class="text-uppercase">{{aplication.name}}</h5>
-          <p><span style="font-weight: bold;">Tipo: </span>{{aplication.appType}} </p>
+          <p><span style="font-weight: bold;">Tipo: </span>{{aplication.appType|translate}} </p>
           <p><span style="font-weight: bold;">Plataforma: </span>{{aplication.opSystem}} </p>
           <p><span style="font-weight: bold;">Requiere Registro: </span>{{aplication.register}} </p>
           <p><span style="font-weight: bold;">Requiere Internet: </span>{{aplication.internetConnection}} </p>
           <p><span style="font-weight: bold;">Versión Actual: </span>{{aplication.currentVersion}} </p>
-          <p><span style="font-weight: bold;">Categoría: </span>{{aplication.category}}</p>
+          <p><span style="font-weight: bold;">Categoría: </span>{{aplication.category|translate}}</p>
           <p><span style="font-weight: bold;">Organización: </span>{{aplication.organization}}</p>
           <p><span style="font-weight: bold;">Desarrollador: </span>{{aplication.developer}}</p>
         </div>
@@ -27,8 +27,8 @@
             "dd.MM.y"}}</p>
           <app-downloads dataUser="" dataTarget="app" dataApp="{{aplication._id}}"></app-downloads>
           <div *ngIf="!isforProfesionals()" class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success btn-block" href="{{aplication.accessPath}}"
-              (click)="registerDownload()">Acceder</a></div>
-          <div *ngIf="isforProfesionals()" class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success btn-block" (click)="confirmPro()">Acceder</a></div>
+              (click)="registerDownload()">{{'Acceder'|translate}}</a></div>
+          <div *ngIf="isforProfesionals()" class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success btn-block" (click)="confirmPro()">{{'Acceder'|translate}}</a></div>
         </div>
       </div>
       <!--Aplication Description Section-->

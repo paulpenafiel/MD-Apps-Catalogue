@@ -4,21 +4,21 @@
       <div class="col-md-2 post-type">
         <i id="type-icon" *ngIf="post.postType==='Noticia'" class="fas fa-newspaper fa-5x"></i>
         <i id="type-icon" *ngIf="post.postType==='Evento'" class="fas fa-calendar-day fa-5x"></i>
-        <h4 class="post-type">{{post.postType}}</h4>
+        <h4 class="post-type">{{post.postType|translate}}</h4>
       </div>
       <div class="col-md-9 px-3">
         <div class="card-block px-3">
           <h4 class="card-title">{{post.title}}</h4>
-          <p *ngIf="post.postType==='Noticia'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-calendar-day"></i> Fecha de Publicación:
+          <p *ngIf="post.postType==='Noticia'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-calendar-day"></i> {{'Fecha de Publicación:'|translate}}
             </span>{{post.date | date : 'yyyy-MM-dd'}}</p>
-          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-calendar-day"></i> Fecha: </span>
+          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-calendar-day"></i> {{'Fecha:'|translate}} </span>
             {{post.date |date: 'yyyy-MM-dd'}}</p>
-          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="far fa-clock"></i> Hora: </span>
+          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="far fa-clock"></i> {{'Hora:'|translate}} </span>
             {{post.Hour}}</p>
-          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-money-bill"></i> Precio: </span>
+          <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-money-bill"></i> {{'Precio:'|translate}} </span>
             {{post.price}} $</p>
           <p class="card-text">{{post.body}}</p>
-          <a href="{{post.source}}" class="btn btn-primary" id="source-link">Ir a la Fuente <i class="fas fa-info-circle"></i></a>
+          <a href="{{post.source}}" class="btn btn-primary" id="source-link">{{'Ir a la Fuente'|translate}} <i class="fas fa-info-circle"></i></a>
         </div>
       </div>
     </div>
