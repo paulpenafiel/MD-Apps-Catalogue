@@ -18,7 +18,7 @@
           <p *ngIf="post.postType==='Evento'" class="card-text"><span style="font-weight: bold;"><i class="fas fa-money-bill"></i> {{'Precio:'|translate}} </span>
             {{post.price}} $</p>
           <p class="card-text">{{post.body}}</p>
-          <a href="{{post.source}}" class="btn btn-primary" id="source-link">{{'Ir a la Fuente'|translate}} <i class="fas fa-info-circle"></i></a>
+          <a href="{{post.source}}" target="_blank" class="btn btn-primary" id="source-link">{{'Ir a la Fuente'|translate}} <i class="fas fa-info-circle"></i></a>
         </div>
       </div>
     </div>

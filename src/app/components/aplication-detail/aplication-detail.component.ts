@@ -94,7 +94,8 @@ export class AplicationDetailComponent implements OnInit {
   confirmPro(){
     if(this.authService.isPro()){
       this.registerDownload();
-      window.location.href = this.aplication.accessPath;
+      // window.location.href = this.aplication.accessPath;
+      window.open(this.aplication.accessPath, '_blank');
     }else{
       alert('Para acceder a las aplicaiones de Uso Profesional debe: Iniciar sesión y su tipo de usuario debe ser "Terapista"');
     }
