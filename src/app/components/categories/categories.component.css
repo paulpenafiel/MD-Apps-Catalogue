@@ -16,9 +16,14 @@ li:hover i{
 
 .fas{
     color: white;
+    display: block;
 }
 
 .nav-item.active{
     background-color: #4ABDAC;  
 }
+
+ul{
+    padding-top: 1%;
+} 
 

@@ -30,6 +30,10 @@ h5{
     margin-bottom: 1%;
 }
 
+#image-card{
+    padding-top: 2%;
+}
+
 /******************Media Responsive Break Point 500px************************/
 @media only screen and (max-width: 500px) {
     .profile-title{
