@@ -80,7 +80,7 @@ export class AuthenticationService {
   }
 
   isPro(){
-    if ( this.loggedIn() &&this.user.usertype==='Terapista'){
+    if ( this.loggedIn() && (this.user.usertype==='Terapista' || this.user.usertype==='Terapeuta')){
       return true;
     }else{
       return false;
