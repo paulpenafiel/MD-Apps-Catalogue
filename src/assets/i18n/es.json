@@ -28,11 +28,11 @@
     "incluticDesc":"incluTICS es un proyecto de la Escuela Politécnica Nacional, que permite a las personas acceder a aplicaciones de inclusión social. El equipo de trabajo cuenta con profesionales que podrán ayudarte a encontrar recursos tecnológicos que puedan satisfacer tus necesidades.",
     "VER DESCRIPCIÓN":"VER DESCRIPCIÓN",
     "Aplicaciones de entretenimiento y concientización":"Aplicaciones de entretenimiento y concientización",
-    "Aplicaciones de comunicación alternativa":"Herramientas de comunicación alternativa",
+    "Aplicaciones de comunicación alternativa":"Aplicaciones de comunicación alternativa",
     "Rampas digitales y uso del computador":"Rampas digitales y uso del computador",
-    "Aplicaciones para usos profesionales":"Herramientas para usos profesionales",
+    "Aplicaciones para usos profesionales":"Aplicaciones para usos profesionales",
     "Aplicaciones de movilidad accesible":"Aplicaciones de movilidad accesible",
-    "Aplicaciones de autocuidado":"Herramientas de autocuidado",
+    "Aplicaciones de autocuidado":"Aplicaciones de autocuidado",
     "Programas de software que utilizan gráficos, pictogramas, y sintetizadores de voz para que personas con limitaciones de movilidad puedan establecer comunicación.":"Programas de software que utilizan gráficos, pictogramas, y sintetizadores de voz para que personas con limitaciones de movilidad puedan establecer comunicación",
     "Recursos tecnológicos que permiten acceder a la tecnología y utilizar el computador a todas las personas, independientemente de sus limitaciones de movilidad":"Recursos tecnológicos que permiten acceder a la tecnología y utilizar el computador a todas las personas, independientemente de sus limitaciones de movilidad",
     "Software que los profesionales de terapia pueden utilizar en actividades como: consulta, investigación, diagnóstico, rehabilitación y control.":"Software que los profesionales de terapia pueden utilizar en actividades como: consulta, investigación, diagnóstico, rehabilitación y control.",
@@ -46,5 +46,53 @@
     "Hora:":"Hora:",
     "Precio:":"Precio:",
     "Fecha de Publicación:":"Fecha de Publicación:",
-    "Acceder":"Acceder"
+    "Acceder":"Acceder",
+    "Registro":"Registro",
+
+    "RegistroForm":{
+        "Tipo":"Tipo de Usuario *",
+        "Terapeuta":"Terapeuta",
+        "Paciente": "Paciente",
+        "Cuidador": "Cuidador",
+        "Público": "Público General",
+        "Ejemplo": "Ejemplo",
+        "Guardar":"Guardar",
+        "Nombre": "Nombre y Apellido (Formato: caracteres alfabéticos) *",
+        "Organización":"Organización *",
+        "Género":"Género *",
+        "Masculino": "Masculino",
+        "Femenino": "Femenino",
+        "Autenticación": "Datos de autenticación",
+        "Email": "correo electrónico (Formato: [texto]@[domino]) *",
+        "Contraseña": "Contraseña *"
+    },
+
+    "LoginForm":{
+        "Ingreso":"Ingreso",
+        "Ingresar":"Ingresar",
+        "Registrado":"¿No eres miembro?",
+        "Registrate": "Regístrate"
+    },
+
+    "Detail":{
+        "Descripción":"Descripción",
+        "Valoración": "Valoración",
+        "Comentarios": "Comentarios",
+        "Hacer un comentario": "Hacer un comentario",
+        "¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.": "¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.",
+        "Desplegar respuestas":"Desplegar respuestas",
+        "Añadir una Respuesta":"Añadir una Reespuesta",
+        "Tipo":"Tipo",
+        "Plataforma":"Plataforma",
+        "Requiere Registro":"Requiere Registro",
+        "Requiere Internet": "Requiere Internet",
+        "Versión Actual":"Versión Actual",
+        "Categoría": "Categoría",
+        "Organización": "Organización",
+        "Desarrollador": "Desarrollador",
+        "Fecha de Revisión": "Fecha de Revisión",
+        "Fecha de Actualización": "Fecha de Actualización",
+        "Número de accesos": "Número de accesos"
+    }
+
 }

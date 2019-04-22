@@ -2,7 +2,7 @@
 <div class="d-flex justify-content-center d-flex align-items-center row" id="register_form">
   <div class="card col-lg-5 col-md-7 col-sm-9 col-12">
     <h5 class="card-header info-color white-text text-center py-4">
-      <strong>Registro</strong>
+      <strong>{{'Registro'|translate}}</strong>
     </h5>
 
     <!--Card content-->
@@ -12,56 +12,56 @@
       <form (submit)="registerUser()" class="text-center" style="color: #757575;">
 
         <div class="form-group">
-          <label>Tipo de Usuario *</label>
+          <label>{{'RegistroForm.Tipo'|translate}}</label>
           <select class="browser-default custom-select" [(ngModel)]="usertype" name="usertype" title="tipo de usuario">
-            <option>Terapeuta</option>
-            <option>Paciente</option>
-            <option>Cuidador</option>
-            <option>Público General</option>
+            <option>{{'RegistroForm.Terapeuta'|translate}}</option>
+            <option>{{'RegistroForm.Paciente'|translate}}</option>
+            <option>{{'RegistroForm.Cuidador'|translate}}</option>
+            <option>{{'RegistroForm.Público'|translate}}</option>
           </select>
         </div>
 
         <!-- Name -->
         <div class="md-form">
-          <input type="text" class="form-control" placeholder="Nombre y Apellido (Formato: caracteres alfabéticos) *"
+          <input type="text" class="form-control" placeholder="{{'RegistroForm.Nombre'|translate}}"
             [(ngModel)]="name" name="name" title="nombre">
-            <p class="input-example">Ejemplo: Paúl Peñafiel </p>
+            <p class="input-example">{{'RegistroForm.Ejemplo'|translate}}: Paúl Peñafiel </p>
         </div>
 
         <!-- organization -->
         <div class="md-form">
-          <input type="text" class="form-control" placeholder="Organización *" [(ngModel)]="organization" name="organization" title="organización">
-          <p class="input-example">Ejemplo: Escuela Politécnica Nacional </p>
+          <input type="text" class="form-control" placeholder="{{'RegistroForm.Organización'|translate}}" [(ngModel)]="organization" name="organization" title="organización">
+          <p class="input-example">{{'RegistroForm.Ejemplo'|translate}}: Escuela Politécnica Nacional </p>
         </div>
 
-        <label>Genero *</label>
+        <label>{{'RegistroForm.Género'|translate}}</label>
         <select class="browser-default custom-select" [(ngModel)]="gender" name="gender" title="género">
-          <option>Masculino</option>
-          <option>Femenino</option>
+          <option>{{'RegistroForm.Masculino'|translate}}</option>
+          <option>{{'RegistroForm.Femenino'|translate}}</option>
         </select>
 
         <hr>
-        <p>Datos de autenticación</p>
+        <p>{{'RegistroForm.Autenticación'|translate}}</p>
         <!-- userName -->
         <div class="md-form">
           <input type="text" class="form-control" placeholder="NickName *" [(ngModel)]="username" name="username" title="pseudónimo">
-          <p class="input-example">Ejemplo: ppenafiel </p>
+          <p class="input-example">{{'RegistroForm.Ejemplo'|translate}}: ppenafiel </p>
         </div>
 
         <!-- Email -->
         <div class="md-form">
-          <input type="email" class="form-control" placeholder="correo electrónico (Formato: [text]@[domino]) *"
+          <input type="email" class="form-control" placeholder="{{'RegistroForm.Email'|translate}}"
             [(ngModel)]="email" name="email" title="e-mail">
-            <p class="input-example">Ejemplo: pulskatezero@hotmail.com </p>
+            <p class="input-example">{{'RegistroForm.Ejemplo'|translate}}: pulskatezero@hotmail.com </p>
         </div>
 
         <!-- Password -->
         <div class="md-form">
-          <input type="password" class="form-control" placeholder="Contraseña *" [(ngModel)]="password" name="password" title="contraseña">
+          <input type="password" class="form-control" placeholder="{{'RegistroForm.Contraseña'|translate}}" [(ngModel)]="password" name="password" title="contraseña">
         </div>
 
         <!-- Sign up button -->
-        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Guardar</button>
+        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">{{'RegistroForm.Guardar'|translate}}</button>
 
       </form>
       <!-- Form -->

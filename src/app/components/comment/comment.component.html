@@ -5,15 +5,14 @@
         <!------------------------------------Logged /not logged Input Commentary------------------------>
         <div id="logged-panel" *ngIf="dataTarget==='app'">
           <div class="panel-body">
-            <h3 class="section-title">Comentarios</h3>
+            <h3 class="section-title">{{'Detail.Comentarios'|translate}}</h3>
 
             <!--comment Form-->
             <form action="">
               <textarea class="form-control" *ngIf="authService.loggedIn()" [(ngModel)]="body" name="body" rows="5"></textarea>
               <br>
               <button *ngIf="authService.loggedIn()" type="button" class="btn btn-info pull-right" (click)="addComment()">Enviar</button>
-              <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" data-toggle="tooltip" title="Para realizar comentarios, debes ingresar con tu cuenta de usuario" routerLink="/login">Hacer
-                un Comentario</a>
+              <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info pull-right" data-toggle="tooltip" title="Para realizar comentarios, debes ingresar con tu cuenta de usuario" routerLink="/login">{{'Detail.Hacer un comentario'|translate}}</a>
             </form>
             <hr>
             <!---------------------------------Commentaries List------------------------------------------>
@@ -34,7 +33,7 @@
                 <!----------------Replies Collapse Button---------------->
                 <div class="btn-group media-body" id="accordion">
                   <a type="button" data-toggle="collapse" style="margin: 0 auto; display: block" data-parent="#accordion" href="#collapseOne{{idx}}">
-                    Desplegar respuestas ({{comment.response.length}})
+                    {{'Detail.Desplegar respuestas'|translate}} ({{comment.response.length}})
                   </a>
                 </div>
                 <!-----------------------Replies List-------------------->
@@ -61,8 +60,8 @@
                         <input type="submit" value="Enviar">
                       </div>
                     </form>
-                    <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info" routerLink="/login" title="Para responder a los comentarios, debes ingresar como un usuario">Añadir
-                      una Respuesta</a>
+                    <a *ngIf="!authService.loggedIn()" type="button" class="btn btn-info" routerLink="/login" title="Para responder a los comentarios, debes ingresar como un usuario">{{'Detail.Añadir
+                      una Respuesta'|translate}}</a>
                   </div>
                 </div>
               </li>

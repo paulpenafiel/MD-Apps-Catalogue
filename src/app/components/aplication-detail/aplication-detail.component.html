@@ -11,19 +11,19 @@
         </div>
         <div class="col-lg-4 col-sm-12 information">
           <h5 class="text-uppercase">{{aplication.name}}</h5>
-          <p><span style="font-weight: bold;">Tipo: </span>{{aplication.appType|translate}} </p>
-          <p><span style="font-weight: bold;">Plataforma: </span>{{aplication.opSystem}} </p>
-          <p><span style="font-weight: bold;">Requiere Registro: </span>{{aplication.register}} </p>
-          <p><span style="font-weight: bold;">Requiere Internet: </span>{{aplication.internetConnection}} </p>
-          <p><span style="font-weight: bold;">Versión Actual: </span>{{aplication.currentVersion}} </p>
-          <p><span style="font-weight: bold;">Categoría: </span>{{aplication.category|translate}}</p>
-          <p><span style="font-weight: bold;">Organización: </span>{{aplication.organization}}</p>
-          <p><span style="font-weight: bold;">Desarrollador: </span>{{aplication.developer}}</p>
+          <p><span style="font-weight: bold;">{{'Detail.Tipo'|translate}}: </span>{{aplication.appType|translate}} </p>
+          <p><span style="font-weight: bold;">{{'Detail.Plataforma'|translate}}: </span>{{aplication.opSystem}} </p>
+          <p><span style="font-weight: bold;">{{'Detail.Requiere Registro'|translate}}: </span>{{aplication.register}} </p>
+          <p><span style="font-weight: bold;">{{'Detail.Requiere Internet'|translate}}: </span>{{aplication.internetConnection}} </p>
+          <p><span style="font-weight: bold;">{{'Detail.Versión Actual'|translate}}: </span>{{aplication.currentVersion}} </p>
+          <p><span style="font-weight: bold;">{{'Detail.Categoría'|translate}}: </span>{{aplication.category|translate}}</p>
+          <p><span style="font-weight: bold;">{{'Detail.Organización'|translate}}: </span>{{aplication.organization}}</p>
+          <p><span style="font-weight: bold;">{{'Detail.Desarrollador'|translate}}: </span>{{aplication.developer}}</p>
         </div>
         <div class="col-lg-3 col-sm-12 information">
           <br>
-          <p><span style="font-weight: bold;">Fecha de Revisión: </span>{{aplication.uploadDate | date : "dd.MM.y"}}</p>
-          <p><span style="font-weight: bold;">Fecha de Actualización: </span>{{aplication.lastUpdate | date :
+          <p><span style="font-weight: bold;">{{'Detail.Fecha de Revisión'|translate}}: </span>{{aplication.uploadDate | date : "dd.MM.y"}}</p>
+          <p><span style="font-weight: bold;">{{'Detail.Fecha de Actualización'|translate}}: </span>{{aplication.lastUpdate | date :
             "dd.MM.y"}}</p>
           <app-downloads dataUser="" dataTarget="app" dataApp="{{aplication._id}}"></app-downloads>
           <div *ngIf="!isforProfesionals()" class="d-flex justify-content-end"><a class="waves-effect waves-light btn btn-success btn-block" href="{{aplication.accessPath}}" target="_blank"
@@ -34,7 +34,7 @@
       <!--Aplication Description Section-->
       <div class="card" id="description-row">
         <div class="card-body">
-          <h3 class="section-title" id="topic">Descripción</h3>
+          <h3 class="section-title" id="topic">{{'Detail.Descripción'|translate}}</h3>
           <p class="card-text" id="app-description">{{aplication.description}}</p>
         </div>
       </div>
@@ -49,9 +49,8 @@
       <!--Rating Input Section-->
       <div class="card" id="valoration-row">
         <div class="card-body">
-          <h3 class="section-title" id="topic">Valoración</h3>
-          <p class="card-text">¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número
-            de estrellas de acuerdo a tu satisfacción.</p>
+          <h3 class="section-title" id="topic">{{'Detail.Valoración'|translate}}</h3>
+          <p class="card-text">{{'Detail.¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.'|translate}}</p>
           <app-rating dataTarget="rating" dataApp="{{aplication._id}}"></app-rating>
         </div>
       </div>

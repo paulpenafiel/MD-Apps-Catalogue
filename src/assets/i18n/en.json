@@ -46,6 +46,53 @@
     "Hora:":"Time:",
     "Precio:":"Price:",
     "Fecha de Publicación:":"Publish Date",
-    "Acceder":"Get In"
+    "Acceder":"Get In",
+    "Registro":"Registry",
     
+    "RegistroForm":{
+        "Tipo":"User Type *",
+        "Terapeuta":"Therapist",
+        "Paciente": "Patient",
+        "Cuidador": "Carer",
+        "Público": "General",
+        "Ejemplo": "Example",
+        "Guardar": "Save",
+        "Nombre": "Name (Format: alphabetic characters) *",
+        "Organización":"Organizatión *",
+        "Género":"Gender *",
+        "Masculino": "Male",
+        "Femenino": "Female",
+        "Autenticación": "Authentication Info",
+        "Email": "email (Format: [text]@[domain]) *",
+        "Contraseña": "Password *"
+    },
+
+    "LoginForm":{
+        "Ingreso":"Log In",
+        "Ingresar":"Enter",
+        "Registrado":"Are you not registered yet?",
+        "Registrate":"Sing Up"
+    },
+
+    "Detail":{
+        "Descripción":"Description",
+        "Valoración": "Score",
+        "Comentarios": "Comments",
+        "Hacer un comentario": "Make a comment",
+        "¿Te gustaría a calificar tu experiencia al utilizar ésta aplicación?. Asigna un número de estrellas de acuerdo a tu satisfacción.": "Would you like to rate your experience when using this application ?. Assign a number of stars according to your satisfaction?",
+        "Desplegar respuestas":"Show responses",
+        "Añadir una Respuesta":"Add a response",
+        "Tipo":"Type",
+        "Plataforma":"Platform",
+        "Requiere Registro":"Registration",
+        "Requiere Internet": "Internet connection",
+        "Versión Actual":"Current version",
+        "Categoría": "Category",
+        "Organización": "Organization",
+        "Desarrollador": "Developer",
+        "Fecha de Revisión": "Review date",
+        "Fecha de Actualización": "Update date",
+        "Número de accesos": "Views"
+
+    }
 }
